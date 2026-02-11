@@ -134,7 +134,7 @@ export default function GoldCalculator() {
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 h-px bg-[#C9A84C]/40" />
-            <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+            <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">
               {t("calc.tag")}
             </span>
             <div className="w-12 h-px bg-[#C9A84C]/40" />
@@ -142,7 +142,7 @@ export default function GoldCalculator() {
           <h2 className="font-[Cormorant_Garamond] text-4xl sm:text-5xl font-bold text-[#E8D5B7] mb-4">
             {t("calc.title")}
           </h2>
-          <p className="font-[Montserrat] text-[14px] text-[#8A8279] max-w-xl mx-auto leading-relaxed">
+          <p className="font-[Montserrat] text-[16px] text-[#8A8279] max-w-xl mx-auto leading-relaxed">
             {t("calc.desc")}
           </p>
         </div>
@@ -154,12 +154,12 @@ export default function GoldCalculator() {
             <div className="flex items-center justify-between px-6 py-3 bg-[#0D0D0D] border-b border-[#C9A84C]/10">
               <div className="flex items-center gap-2">
                 <Calculator size={14} className="text-[#C9A84C]" />
-                <span className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#C9A84C]">
+                <span className="font-[Montserrat] text-[13px] uppercase tracking-wider text-[#C9A84C]">
                   {t("calc.liveCalc")}
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="font-[Montserrat] text-[10px] text-[#8A8279]/60">
+                <span className="font-[Montserrat] text-[12px] text-[#8A8279]/60">
                   24K: {selectedCurrency.symbol}{formatNumber(goldPerGram24K * selectedCurrency.rate)}/g
                 </span>
                 <div className={`w-1.5 h-1.5 rounded-full ${isLive ? "bg-emerald-400 animate-pulse" : "bg-amber-400"}`} />
@@ -172,7 +172,7 @@ export default function GoldCalculator() {
             <div className="p-6 sm:p-8">
               {/* Gold Type Selector — NEW */}
               <div className="mb-8">
-                <label className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] mb-3 block">
+                <label className="font-[Montserrat] text-[13px] uppercase tracking-wider text-[#8A8279] mb-3 block">
                   {t("calc.goldType")}
                 </label>
                 <div className="grid grid-cols-3 gap-3">
@@ -194,12 +194,12 @@ export default function GoldCalculator() {
                         }`}>
                           <Icon size={20} className={`transition-colors duration-300 ${isActive ? "text-[#C9A84C]" : "text-[#8A8279] group-hover:text-[#C9A84C]"}`} />
                         </div>
-                        <span className={`font-[Montserrat] text-[12px] font-semibold uppercase tracking-wider transition-colors duration-300 ${
+                        <span className={`font-[Montserrat] text-[14px] font-semibold uppercase tracking-wider transition-colors duration-300 ${
                           isActive ? "text-[#C9A84C]" : "text-[#E8D5B7] group-hover:text-[#C9A84C]"
                         }`}>
                           {t(`calc.type.${type.value}`)}
                         </span>
-                        <span className="font-[Montserrat] text-[9px] text-[#8A8279]">
+                        <span className="font-[Montserrat] text-[11px] text-[#8A8279]">
                           +{type.premiumPercent}% {t("calc.premium")}
                         </span>
                         {isActive && (
@@ -216,7 +216,7 @@ export default function GoldCalculator() {
                 <div className="space-y-6">
                   {/* Weight input */}
                   <div>
-                    <label className="flex items-center gap-2 font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] mb-3">
+                    <label className="flex items-center gap-2 font-[Montserrat] text-[13px] uppercase tracking-wider text-[#8A8279] mb-3">
                       <Scale size={13} className="text-[#C9A84C]" />
                       {t("calc.weight")}
                     </label>
@@ -230,7 +230,7 @@ export default function GoldCalculator() {
                         className="w-full bg-[#0A0A0A] border border-[#C9A84C]/20 rounded-xl px-5 py-4 font-[Montserrat] text-2xl font-semibold text-[#E8D5B7] focus:outline-none focus:border-[#C9A84C]/60 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                         placeholder="0"
                       />
-                      <span className="absolute right-5 top-1/2 -translate-y-1/2 font-[Montserrat] text-[13px] text-[#8A8279]">
+                      <span className="absolute right-5 top-1/2 -translate-y-1/2 font-[Montserrat] text-[15px] text-[#8A8279]">
                         grams
                       </span>
                     </div>
@@ -240,7 +240,7 @@ export default function GoldCalculator() {
                         <button
                           key={w}
                           onClick={() => setWeight(String(w))}
-                          className={`font-[Montserrat] text-[11px] px-3 py-1.5 rounded-full border transition-all duration-200 ${
+                          className={`font-[Montserrat] text-[13px] px-3 py-1.5 rounded-full border transition-all duration-200 ${
                             weight === String(w)
                               ? "border-[#C9A84C] bg-[#C9A84C]/15 text-[#C9A84C]"
                               : "border-[#C9A84C]/10 text-[#8A8279] hover:border-[#C9A84C]/30 hover:text-[#E8D5B7]"
@@ -254,7 +254,7 @@ export default function GoldCalculator() {
 
                   {/* Karat selection */}
                   <div>
-                    <label className="flex items-center gap-2 font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] mb-3">
+                    <label className="flex items-center gap-2 font-[Montserrat] text-[13px] uppercase tracking-wider text-[#8A8279] mb-3">
                       <Gem size={13} className="text-[#C9A84C]" />
                       {t("calc.karat")}
                     </label>
@@ -269,10 +269,10 @@ export default function GoldCalculator() {
                               : "border-[#C9A84C]/10 hover:border-[#C9A84C]/30"
                           }`}
                         >
-                          <span className={`font-[Montserrat] text-[13px] font-bold ${karat === k.value ? "text-[#C9A84C]" : "text-[#E8D5B7]"}`}>
+                          <span className={`font-[Montserrat] text-[15px] font-bold ${karat === k.value ? "text-[#C9A84C]" : "text-[#E8D5B7]"}`}>
                             {k.label}
                           </span>
-                          <span className="font-[Montserrat] text-[9px] text-[#8A8279] mt-0.5">
+                          <span className="font-[Montserrat] text-[11px] text-[#8A8279] mt-0.5">
                             {k.purity}
                           </span>
                         </button>
@@ -282,7 +282,7 @@ export default function GoldCalculator() {
 
                   {/* Currency selection */}
                   <div>
-                    <label className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] mb-3 block">
+                    <label className="font-[Montserrat] text-[13px] uppercase tracking-wider text-[#8A8279] mb-3 block">
                       {t("calc.currency")}
                     </label>
                     <div className="flex flex-wrap gap-2">
@@ -290,7 +290,7 @@ export default function GoldCalculator() {
                         <button
                           key={c.code}
                           onClick={() => setCurrency(c.code)}
-                          className={`font-[Montserrat] text-[11px] px-4 py-2 rounded-full border transition-all duration-200 ${
+                          className={`font-[Montserrat] text-[13px] px-4 py-2 rounded-full border transition-all duration-200 ${
                             currency === c.code
                               ? "border-[#C9A84C] bg-[#C9A84C]/15 text-[#C9A84C]"
                               : "border-[#C9A84C]/10 text-[#8A8279] hover:border-[#C9A84C]/30 hover:text-[#E8D5B7]"
@@ -309,10 +309,10 @@ export default function GoldCalculator() {
                     {/* Gold type badge */}
                     <div>
                       <div className="flex items-center justify-between mb-4">
-                        <span className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#C9A84C]/70">
+                        <span className="font-[Montserrat] text-[13px] uppercase tracking-wider text-[#C9A84C]/70">
                           {t("calc.estimated")}
                         </span>
-                        <span className="font-[Montserrat] text-[9px] uppercase tracking-wider text-[#8A8279] bg-[#C9A84C]/10 px-3 py-1 rounded-full">
+                        <span className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] bg-[#C9A84C]/10 px-3 py-1 rounded-full">
                           {t(`calc.type.${goldType}`)} · {selectedKarat.label}
                         </span>
                       </div>
@@ -325,13 +325,13 @@ export default function GoldCalculator() {
                             ? `${(calculation.totalLocal / 1000000).toFixed(2)}M`
                             : formatNumber(calculation.totalLocal)}
                         </span>
-                        <span className="font-[Montserrat] text-[13px] text-[#8A8279] ml-2">
+                        <span className="font-[Montserrat] text-[15px] text-[#8A8279] ml-2">
                           {selectedCurrency.code}
                         </span>
                       </div>
 
                       {currency !== "USD" && (
-                        <div className="font-[Montserrat] text-[12px] text-[#8A8279] mb-4">
+                        <div className="font-[Montserrat] text-[14px] text-[#8A8279] mb-4">
                           ≈ ${formatNumber(calculation.totalUSD)} USD
                         </div>
                       )}
@@ -339,7 +339,7 @@ export default function GoldCalculator() {
                       {/* Premium notice */}
                       <div className="flex items-center gap-2 mb-5 px-3 py-2 bg-[#C9A84C]/5 rounded-lg border border-[#C9A84C]/10">
                         <Info size={11} className="text-[#C9A84C] shrink-0" />
-                        <span className="font-[Montserrat] text-[10px] text-[#8A8279]">
+                        <span className="font-[Montserrat] text-[12px] text-[#8A8279]">
                           {t("calc.premiumNote")} <span className="text-[#C9A84C]">+{calculation.premiumPercent}%</span> {t(`calc.type.${goldType}`).toLowerCase()} {t("calc.premiumSuffix")}
                         </span>
                       </div>
@@ -347,7 +347,7 @@ export default function GoldCalculator() {
                       {/* Breakdown toggle */}
                       <button
                         onClick={() => setShowDetails(!showDetails)}
-                        className="flex items-center gap-1.5 font-[Montserrat] text-[11px] uppercase tracking-wider text-[#C9A84C]/70 hover:text-[#C9A84C] transition-colors mb-4"
+                        className="flex items-center gap-1.5 font-[Montserrat] text-[13px] uppercase tracking-wider text-[#C9A84C]/70 hover:text-[#C9A84C] transition-colors mb-4"
                       >
                         <Info size={12} />
                         {showDetails ? t("calc.hideDetails") : t("calc.showDetails")}
@@ -355,39 +355,39 @@ export default function GoldCalculator() {
 
                       {showDetails && (
                         <div className="space-y-2.5 border-t border-[#C9A84C]/10 pt-4 animate-in fade-in duration-300">
-                          <div className="flex justify-between font-[Montserrat] text-[12px]">
+                          <div className="flex justify-between font-[Montserrat] text-[14px]">
                             <span className="text-[#8A8279]">{t("calc.goldType")}</span>
                             <span className="text-[#E8D5B7]">{t(`calc.type.${goldType}`)}</span>
                           </div>
-                          <div className="flex justify-between font-[Montserrat] text-[12px]">
+                          <div className="flex justify-between font-[Montserrat] text-[14px]">
                             <span className="text-[#8A8279]">{t("calc.weightLabel")}</span>
                             <span className="text-[#E8D5B7]">{calculation.weight}g</span>
                           </div>
-                          <div className="flex justify-between font-[Montserrat] text-[12px]">
+                          <div className="flex justify-between font-[Montserrat] text-[14px]">
                             <span className="text-[#8A8279]">{t("calc.purityLabel")}</span>
                             <span className="text-[#E8D5B7]">{selectedKarat.label} ({calculation.purity})</span>
                           </div>
-                          <div className="flex justify-between font-[Montserrat] text-[12px]">
+                          <div className="flex justify-between font-[Montserrat] text-[14px]">
                             <span className="text-[#8A8279]">{t("calc.basePrice")}</span>
                             <span className="text-[#E8D5B7]">
                               {selectedCurrency.symbol}{formatNumber(calculation.basePriceLocal)}/g
                             </span>
                           </div>
-                          <div className="flex justify-between font-[Montserrat] text-[12px]">
+                          <div className="flex justify-between font-[Montserrat] text-[14px]">
                             <span className="text-[#8A8279]">{t("calc.premium")} (+{calculation.premiumPercent}%)</span>
                             <span className="text-[#C9A84C]">
                               +{selectedCurrency.symbol}{formatNumber(calculation.premiumLocal)}/g
                             </span>
                           </div>
-                          <div className="border-t border-[#C9A84C]/10 pt-2.5 flex justify-between font-[Montserrat] text-[12px]">
+                          <div className="border-t border-[#C9A84C]/10 pt-2.5 flex justify-between font-[Montserrat] text-[14px]">
                             <span className="text-[#8A8279]">{t("calc.pricePerGram")}</span>
                             <span className="text-[#E8D5B7] font-semibold">
                               {selectedCurrency.symbol}{formatNumber(calculation.pricePerGramLocal)}/g
                             </span>
                           </div>
-                          <div className="flex justify-between font-[Montserrat] text-[12px]">
+                          <div className="flex justify-between font-[Montserrat] text-[14px]">
                             <span className="text-[#8A8279]">{t("calc.formula")}</span>
-                            <span className="text-[#C9A84C] text-[11px]">
+                            <span className="text-[#C9A84C] text-[13px]">
                               {calculation.weight}g × {selectedCurrency.symbol}{formatNumber(calculation.pricePerGramLocal)}/g
                             </span>
                           </div>
@@ -399,12 +399,12 @@ export default function GoldCalculator() {
                     <div className="mt-6 pt-6 border-t border-[#C9A84C]/10">
                       <a
                         href="#contact"
-                        className="flex items-center justify-center gap-2 w-full font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-6 py-3.5 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300"
+                        className="flex items-center justify-center gap-2 w-full font-[Montserrat] text-[14px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-6 py-3.5 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300"
                       >
                         {t("calc.getQuote")}
                         <ArrowRight size={14} />
                       </a>
-                      <p className="font-[Montserrat] text-[9px] text-[#8A8279]/50 text-center mt-3">
+                      <p className="font-[Montserrat] text-[11px] text-[#8A8279]/50 text-center mt-3">
                         {t("calc.disclaimer")}
                       </p>
                     </div>

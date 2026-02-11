@@ -61,7 +61,7 @@ export default function FaqSection() {
             }`}
           >
             <div className="w-8 h-px bg-[#C9A84C]" />
-            <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+            <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">
               {t("faq.tag")}
             </span>
             <div className="w-8 h-px bg-[#C9A84C]" />
@@ -74,7 +74,7 @@ export default function FaqSection() {
             {t("faq.title")}
           </h2>
           <p
-            className={`font-[Montserrat] text-[15px] text-[#8A8279] max-w-2xl mx-auto transition-all duration-700 delay-200 ${
+            className={`font-[Montserrat] text-[17px] text-[#8A8279] max-w-2xl mx-auto transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -95,7 +95,7 @@ export default function FaqSection() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between p-5 sm:p-6 text-left"
               >
-                <span className="font-[Montserrat] text-[14px] sm:text-[15px] font-medium text-[#E8D5B7] pr-4">
+                <span className="font-[Montserrat] text-[16px] sm:text-[17px] font-medium text-[#E8D5B7] pr-4">
                   {faq.q}
                 </span>
                 <ChevronDown
@@ -112,7 +112,7 @@ export default function FaqSection() {
               >
                 <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-0">
                   <div className="w-full h-px bg-[#C9A84C]/10 mb-4" />
-                  <p className="font-[Montserrat] text-[13px] sm:text-[14px] leading-relaxed text-[#8A8279]">
+                  <p className="font-[Montserrat] text-[15px] sm:text-[16px] leading-relaxed text-[#8A8279]">
                     {faq.a}
                   </p>
                 </div>

@@ -32,7 +32,7 @@ export default function AboutSection() {
           <div className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-8 h-px bg-[#C9A84C]" />
-              <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+              <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">
                 {t("about.tag")}
               </span>
             </div>
@@ -41,11 +41,11 @@ export default function AboutSection() {
               {t("about.title")}
             </h2>
 
-            <p className="font-[Montserrat] text-[15px] leading-[1.8] text-[#8A8279] mb-6">
+            <p className="font-[Montserrat] text-[17px] leading-[1.8] text-[#8A8279] mb-6">
               {t("about.p1")}
             </p>
 
-            <p className="font-[Montserrat] text-[15px] leading-[1.8] text-[#8A8279] mb-10">
+            <p className="font-[Montserrat] text-[17px] leading-[1.8] text-[#8A8279] mb-10">
               {t("about.p2")}
             </p>
 
@@ -59,7 +59,7 @@ export default function AboutSection() {
                   <div className="font-[Cormorant_Garamond] text-3xl sm:text-4xl font-bold text-[#C9A84C]">
                     {stat.value}
                   </div>
-                  <div className="font-[Montserrat] text-[11px] uppercase tracking-[0.1em] text-[#8A8279] mt-1">
+                  <div className="font-[Montserrat] text-[13px] uppercase tracking-[0.1em] text-[#8A8279] mt-1">
                     {stat.label}
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export default function AboutSection() {
                   <div className="w-20 h-20 rounded-full border-2 border-[#C9A84C]/60 flex items-center justify-center bg-[#0A0A0A]/50 backdrop-blur-sm group-hover:border-[#C9A84C] group-hover:bg-[#C9A84C]/20 transition-all duration-300">
                     <Play size={28} className="text-[#C9A84C] ml-1" fill="#C9A84C" />
                   </div>
-                  <span className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#E8D5B7] mt-4">
+                  <span className="font-[Montserrat] text-[13px] uppercase tracking-wider text-[#E8D5B7] mt-4">
                     {t("about.videoTitle")}
                   </span>
                 </button>
@@ -101,12 +101,12 @@ export default function AboutSection() {
                 <div className="absolute inset-0 bg-[#0A0A0A] flex items-center justify-center">
                   <div className="text-center p-8">
                     <Play size={48} className="text-[#C9A84C]/40 mx-auto mb-4" />
-                    <p className="font-[Montserrat] text-[14px] text-[#8A8279]">
+                    <p className="font-[Montserrat] text-[16px] text-[#8A8279]">
                       {t("about.videoDesc")}
                     </p>
                     <button
                       onClick={() => setVideoPlaying(false)}
-                      className="mt-4 font-[Montserrat] text-[12px] uppercase tracking-wider text-[#C9A84C] border border-[#C9A84C]/30 px-6 py-2 hover:bg-[#C9A84C]/10 transition-colors"
+                      className="mt-4 font-[Montserrat] text-[14px] uppercase tracking-wider text-[#C9A84C] border border-[#C9A84C]/30 px-6 py-2 hover:bg-[#C9A84C]/10 transition-colors"
                     >
                       Close
                     </button>

@@ -71,7 +71,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="font-[Montserrat] text-[11px] uppercase tracking-[0.12em] text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300"
+                  className="font-[Montserrat] text-[13px] uppercase tracking-[0.12em] text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300"
                 >
                   {link.label}
                 </a>
@@ -81,7 +81,7 @@ export default function Navbar() {
               <div className="relative">
                 <button
                   onClick={(e) => { e.stopPropagation(); setLangOpen(!langOpen); }}
-                  className="flex items-center gap-1.5 font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300 px-2 py-1"
+                  className="flex items-center gap-1.5 font-[Montserrat] text-[13px] uppercase tracking-wider text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300 px-2 py-1"
                 >
                   <Globe size={14} />
                   {langLabels[lang]}
@@ -92,7 +92,7 @@ export default function Navbar() {
                       <button
                         key={l}
                         onClick={(e) => { e.stopPropagation(); setLang(l); setLangOpen(false); }}
-                        className={`block w-full text-left px-4 py-2.5 font-[Montserrat] text-[12px] transition-colors duration-200 ${
+                        className={`block w-full text-left px-4 py-2.5 font-[Montserrat] text-[14px] transition-colors duration-200 ${
                           lang === l
                             ? "text-[#C9A84C] bg-[#C9A84C]/5"
                             : "text-[#8A8279] hover:text-[#E8D5B7] hover:bg-[#C9A84C]/5"
@@ -107,7 +107,7 @@ export default function Navbar() {
 
               <a
                 href="#contact"
-                className="font-[Montserrat] text-[11px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-5 py-2 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300"
+                className="font-[Montserrat] text-[13px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-5 py-2 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300"
               >
                 {t("nav.getStarted")}
               </a>
@@ -136,7 +136,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block font-[Montserrat] text-[13px] uppercase tracking-[0.15em] text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300"
+                className="block font-[Montserrat] text-[15px] uppercase tracking-[0.15em] text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -149,7 +149,7 @@ export default function Navbar() {
                 <button
                   key={l}
                   onClick={() => { setLang(l); }}
-                  className={`font-[Montserrat] text-[12px] px-3 py-1 transition-colors duration-200 ${
+                  className={`font-[Montserrat] text-[14px] px-3 py-1 transition-colors duration-200 ${
                     lang === l
                       ? "text-[#0A0A0A] bg-[#C9A84C]"
                       : "text-[#8A8279] border border-[#C9A84C]/20 hover:text-[#C9A84C]"
@@ -163,7 +163,7 @@ export default function Navbar() {
             <a
               href="#contact"
               onClick={() => setMobileOpen(false)}
-              className="inline-block font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-6 py-2.5 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300 mt-2"
+              className="inline-block font-[Montserrat] text-[14px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-6 py-2.5 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300 mt-2"
             >
               {t("nav.getStarted")}
             </a>

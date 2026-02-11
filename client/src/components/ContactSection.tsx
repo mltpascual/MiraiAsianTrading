@@ -30,7 +30,7 @@ export default function ContactSection() {
     {
       icon: MapPin,
       label: t("contact.visit"),
-      value: "26 Ethiopia Street Section IV\nDoña Soledad Avenue, Better Living Subdivision\nParañaque City, Manila, Philippines",
+      value: "Parañaque City, Manila, Philippines",
     },
     {
       icon: Phone,
@@ -63,7 +63,7 @@ export default function ContactSection() {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-8 h-px bg-[#C9A84C]" />
-              <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+              <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">
                 {t("contact.tag")}
               </span>
             </div>
@@ -73,7 +73,7 @@ export default function ContactSection() {
               <span className="text-gold-gradient">{t("contact.titleHighlight")}</span>
             </h2>
 
-            <p className="font-[Montserrat] text-[15px] leading-[1.8] text-[#8A8279] mb-12">
+            <p className="font-[Montserrat] text-[17px] leading-[1.8] text-[#8A8279] mb-12">
               {t("contact.desc")}
             </p>
 
@@ -93,10 +93,10 @@ export default function ContactSection() {
                       <Icon size={18} className="text-[#C9A84C]" strokeWidth={1.5} />
                     </div>
                     <div>
-                      <div className="font-[Montserrat] text-[11px] uppercase tracking-[0.15em] text-[#C9A84C] mb-1">
+                      <div className="font-[Montserrat] text-[13px] uppercase tracking-[0.15em] text-[#C9A84C] mb-1">
                         {info.label}
                       </div>
-                      <div className="font-[Montserrat] text-[14px] text-[#8A8279] whitespace-pre-line leading-relaxed">
+                      <div className="font-[Montserrat] text-[16px] text-[#8A8279] whitespace-pre-line leading-relaxed">
                         {info.value}
                       </div>
                     </div>
@@ -140,7 +140,7 @@ export default function ContactSection() {
 
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block font-[Montserrat] text-[11px] uppercase tracking-[0.15em] text-[#C9A84C] mb-2">
+                  <label htmlFor="name" className="block font-[Montserrat] text-[13px] uppercase tracking-[0.15em] text-[#C9A84C] mb-2">
                     {t("contact.name")}
                   </label>
                   <input
@@ -149,13 +149,13 @@ export default function ContactSection() {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[14px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40"
+                    className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[16px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40"
                     placeholder={t("contact.namePlaceholder")}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block font-[Montserrat] text-[11px] uppercase tracking-[0.15em] text-[#C9A84C] mb-2">
+                  <label htmlFor="email" className="block font-[Montserrat] text-[13px] uppercase tracking-[0.15em] text-[#C9A84C] mb-2">
                     {t("contact.emailLabel")}
                   </label>
                   <input
@@ -164,13 +164,13 @@ export default function ContactSection() {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[14px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40"
+                    className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[16px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40"
                     placeholder={t("contact.emailPlaceholder")}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block font-[Montserrat] text-[11px] uppercase tracking-[0.15em] text-[#C9A84C] mb-2">
+                  <label htmlFor="phone" className="block font-[Montserrat] text-[13px] uppercase tracking-[0.15em] text-[#C9A84C] mb-2">
                     {t("contact.phone")}
                   </label>
                   <input
@@ -178,13 +178,13 @@ export default function ContactSection() {
                     id="phone"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[14px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40"
+                    className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[16px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40"
                     placeholder={t("contact.phonePlaceholder")}
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block font-[Montserrat] text-[11px] uppercase tracking-[0.15em] text-[#C9A84C] mb-2">
+                  <label htmlFor="message" className="block font-[Montserrat] text-[13px] uppercase tracking-[0.15em] text-[#C9A84C] mb-2">
                     {t("contact.message")}
                   </label>
                   <textarea
@@ -193,14 +193,14 @@ export default function ContactSection() {
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[14px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40 resize-none"
+                    className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[16px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40 resize-none"
                     placeholder={t("contact.messagePlaceholder")}
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full font-[Montserrat] text-[12px] uppercase tracking-[0.2em] text-[#0A0A0A] bg-[#C9A84C] py-4 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300 mt-4"
+                  className="w-full font-[Montserrat] text-[14px] uppercase tracking-[0.2em] text-[#0A0A0A] bg-[#C9A84C] py-4 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300 mt-4"
                 >
                   {t("contact.submit")}
                 </button>

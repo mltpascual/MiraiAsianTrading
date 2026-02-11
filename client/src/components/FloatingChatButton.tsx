@@ -25,7 +25,7 @@ export default function FloatingChatButton() {
           <h3 className="font-[Cormorant_Garamond] text-xl font-bold text-[#E8D5B7]">
             Quick Contact
           </h3>
-          <p className="font-[Montserrat] text-[12px] text-[#8A8279] mt-1">
+          <p className="font-[Montserrat] text-[14px] text-[#8A8279] mt-1">
             Reach us through any of these channels
           </p>
         </div>
@@ -42,10 +42,10 @@ export default function FloatingChatButton() {
               <MessageCircle size={18} className="text-[#0084FF]" />
             </div>
             <div>
-              <span className="font-[Montserrat] text-[13px] font-medium text-[#E8D5B7] group-hover:text-[#C9A84C] transition-colors">
+              <span className="font-[Montserrat] text-[15px] font-medium text-[#E8D5B7] group-hover:text-[#C9A84C] transition-colors">
                 Facebook Messenger
               </span>
-              <p className="font-[Montserrat] text-[11px] text-[#8A8279]">
+              <p className="font-[Montserrat] text-[13px] text-[#8A8279]">
                 Chat with us on Messenger
               </p>
             </div>
@@ -60,10 +60,10 @@ export default function FloatingChatButton() {
               <Phone size={18} className="text-emerald-400" />
             </div>
             <div>
-              <span className="font-[Montserrat] text-[13px] font-medium text-[#E8D5B7] group-hover:text-[#C9A84C] transition-colors">
+              <span className="font-[Montserrat] text-[15px] font-medium text-[#E8D5B7] group-hover:text-[#C9A84C] transition-colors">
                 Call Us
               </span>
-              <p className="font-[Montserrat] text-[11px] text-[#8A8279]">
+              <p className="font-[Montserrat] text-[13px] text-[#8A8279]">
                 0917 123 4567
               </p>
             </div>
@@ -78,10 +78,10 @@ export default function FloatingChatButton() {
               <Mail size={18} className="text-[#C9A84C]" />
             </div>
             <div>
-              <span className="font-[Montserrat] text-[13px] font-medium text-[#E8D5B7] group-hover:text-[#C9A84C] transition-colors">
+              <span className="font-[Montserrat] text-[15px] font-medium text-[#E8D5B7] group-hover:text-[#C9A84C] transition-colors">
                 Email Us
               </span>
-              <p className="font-[Montserrat] text-[11px] text-[#8A8279]">
+              <p className="font-[Montserrat] text-[13px] text-[#8A8279]">
                 miraiastiantrading@gmail.com
               </p>
             </div>
@@ -94,7 +94,7 @@ export default function FloatingChatButton() {
               setOpen(false);
               document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
             }}
-            className="w-full flex items-center justify-center gap-2 p-3 bg-[#C9A84C] hover:bg-[#E8D5B7] text-[#0A0A0A] font-[Montserrat] text-[12px] uppercase tracking-wider font-semibold rounded-full transition-colors duration-300"
+            className="w-full flex items-center justify-center gap-2 p-3 bg-[#C9A84C] hover:bg-[#E8D5B7] text-[#0A0A0A] font-[Montserrat] text-[14px] uppercase tracking-wider font-semibold rounded-full transition-colors duration-300"
           >
             <Send size={14} />
             Send Inquiry

@@ -25,7 +25,7 @@ export default function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </div>
-            <p className="font-[Montserrat] text-[13px] leading-[1.8] text-[#8A8279] max-w-xs mb-6">
+            <p className="font-[Montserrat] text-[15px] leading-[1.8] text-[#8A8279] max-w-xs mb-6">
               {t("footer.desc")}
             </p>
             {/* Social Media Links */}
@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-[Montserrat] text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
+            <h4 className="font-[Montserrat] text-[13px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
               {t("footer.quickLinks")}
             </h4>
             <nav className="space-y-3">
@@ -71,7 +71,7 @@ export default function Footer() {
                 { label: t("nav.faq"), href: "#faq" },
                 { label: t("nav.contact"), href: "#contact" },
               ].map((link) => (
-                <a key={link.href} href={link.href} className="block font-[Montserrat] text-[13px] text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300">
+                <a key={link.href} href={link.href} className="block font-[Montserrat] text-[15px] text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300">
                   {link.label}
                 </a>
               ))}
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-[Montserrat] text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
+            <h4 className="font-[Montserrat] text-[13px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
               {t("footer.services")}
             </h4>
             <nav className="space-y-3">
@@ -90,18 +90,18 @@ export default function Footer() {
                 t("footer.svc3"),
                 t("footer.svc4"),
               ].map((item) => (
-                <span key={item} className="block font-[Montserrat] text-[13px] text-[#8A8279]">{item}</span>
+                <span key={item} className="block font-[Montserrat] text-[15px] text-[#8A8279]">{item}</span>
               ))}
             </nav>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-[Montserrat] text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
+            <h4 className="font-[Montserrat] text-[13px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
               {t("footer.contactInfo")}
             </h4>
-            <div className="space-y-3 font-[Montserrat] text-[13px] text-[#8A8279]">
-              <p>26 Ethiopia Street Section IV<br />Doña Soledad Avenue<br />Parañaque City, Philippines</p>
+            <div className="space-y-3 font-[Montserrat] text-[15px] text-[#8A8279]">
+              <p>Parañaque City, Manila, Philippines</p>
               <p>0917 123 4567</p>
               <p>miraiastiantrading@gmail.com</p>
             </div>
@@ -110,14 +110,14 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-[#C9A84C]/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="font-[Montserrat] text-[11px] text-[#8A8279]/60 tracking-wide">
+          <p className="font-[Montserrat] text-[13px] text-[#8A8279]/60 tracking-wide">
             &copy; {currentYear} Mirai Asian Trading Co., Ltd. {t("footer.rights")}
           </p>
           <div className="flex gap-6">
-            <a href="#" className="font-[Montserrat] text-[11px] text-[#8A8279]/60 hover:text-[#C9A84C] transition-colors duration-300" onClick={(e) => { e.preventDefault(); toast("Feature coming soon"); }}>
+            <a href="#" className="font-[Montserrat] text-[13px] text-[#8A8279]/60 hover:text-[#C9A84C] transition-colors duration-300" onClick={(e) => { e.preventDefault(); toast("Feature coming soon"); }}>
               {t("footer.privacy")}
             </a>
-            <a href="#" className="font-[Montserrat] text-[11px] text-[#8A8279]/60 hover:text-[#C9A84C] transition-colors duration-300" onClick={(e) => { e.preventDefault(); toast("Feature coming soon"); }}>
+            <a href="#" className="font-[Montserrat] text-[13px] text-[#8A8279]/60 hover:text-[#C9A84C] transition-colors duration-300" onClick={(e) => { e.preventDefault(); toast("Feature coming soon"); }}>
               {t("footer.terms")}
             </a>
           </div>

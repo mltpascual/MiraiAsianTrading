@@ -56,7 +56,7 @@ export default function GallerySection() {
             }`}
           >
             <div className="w-8 h-px bg-[#C9A84C]" />
-            <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+            <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">
               {t("gallery.tag")}
             </span>
             <div className="w-8 h-px bg-[#C9A84C]" />
@@ -69,7 +69,7 @@ export default function GallerySection() {
             {t("gallery.title")}
           </h2>
           <p
-            className={`font-[Montserrat] text-[15px] text-[#8A8279] max-w-2xl mx-auto transition-all duration-700 delay-200 ${
+            className={`font-[Montserrat] text-[17px] text-[#8A8279] max-w-2xl mx-auto transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -94,7 +94,7 @@ export default function GallerySection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                <span className="font-[Montserrat] text-[13px] font-medium text-[#E8D5B7]">
+                <span className="font-[Montserrat] text-[15px] font-medium text-[#E8D5B7]">
                   {img.title}
                 </span>
               </div>
@@ -135,7 +135,7 @@ export default function GallerySection() {
             onClick={(e) => e.stopPropagation()}
           />
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2">
-            <span className="font-[Montserrat] text-[14px] text-[#E8D5B7]">
+            <span className="font-[Montserrat] text-[16px] text-[#E8D5B7]">
               {galleryImages[lightbox].title}
             </span>
           </div>

@@ -33,7 +33,7 @@ export default function CertificationsSection() {
             }`}
           >
             <div className="w-8 h-px bg-[#C9A84C]" />
-            <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+            <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">
               {t("certs.tag")}
             </span>
             <div className="w-8 h-px bg-[#C9A84C]" />
@@ -46,7 +46,7 @@ export default function CertificationsSection() {
             {t("certs.title")}
           </h2>
           <p
-            className={`font-[Montserrat] text-[14px] text-[#8A8279] max-w-2xl mx-auto transition-all duration-700 delay-200 ${
+            className={`font-[Montserrat] text-[16px] text-[#8A8279] max-w-2xl mx-auto transition-all duration-700 delay-200 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -70,10 +70,10 @@ export default function CertificationsSection() {
                   className="text-[#C9A84C]/60 group-hover:text-[#C9A84C] transition-colors duration-300 mb-3"
                   strokeWidth={1.5}
                 />
-                <span className="font-[Montserrat] text-[12px] font-semibold text-[#E8D5B7] mb-1">
+                <span className="font-[Montserrat] text-[14px] font-semibold text-[#E8D5B7] mb-1">
                   {cert.name}
                 </span>
-                <span className="font-[Montserrat] text-[10px] text-[#8A8279] leading-tight">
+                <span className="font-[Montserrat] text-[12px] text-[#8A8279] leading-tight">
                   {cert.desc}
                 </span>
               </div>

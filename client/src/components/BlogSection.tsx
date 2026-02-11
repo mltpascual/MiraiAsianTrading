@@ -153,7 +153,7 @@ function ArticleModal({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
           <div className="absolute bottom-4 left-6">
-            <span className="inline-flex items-center gap-1.5 font-[Montserrat] text-[10px] uppercase tracking-wider bg-[#C9A84C] text-[#0A0A0A] px-3 py-1 font-semibold">
+            <span className="inline-flex items-center gap-1.5 font-[Montserrat] text-[12px] uppercase tracking-wider bg-[#C9A84C] text-[#0A0A0A] px-3 py-1 font-semibold">
               {article.categoryIcon}
               {article.category}
             </span>
@@ -163,11 +163,11 @@ function ArticleModal({
         {/* Content */}
         <div className="p-6 lg:p-10">
           <div className="flex items-center gap-4 mb-5">
-            <span className="flex items-center gap-1.5 font-[Montserrat] text-[11px] text-[#8A8279]">
+            <span className="flex items-center gap-1.5 font-[Montserrat] text-[13px] text-[#8A8279]">
               <Calendar size={12} />
               {article.date}
             </span>
-            <span className="flex items-center gap-1.5 font-[Montserrat] text-[11px] text-[#8A8279]">
+            <span className="flex items-center gap-1.5 font-[Montserrat] text-[13px] text-[#8A8279]">
               <Clock size={12} />
               {article.readTime}
             </span>
@@ -181,7 +181,7 @@ function ArticleModal({
             {article.fullContent.map((paragraph, i) => (
               <p
                 key={i}
-                className="font-[Montserrat] text-[14px] text-[#A89B8C] leading-[1.8]"
+                className="font-[Montserrat] text-[16px] text-[#A89B8C] leading-[1.8]"
               >
                 {paragraph}
               </p>
@@ -190,14 +190,14 @@ function ArticleModal({
 
           {/* CTA */}
           <div className="mt-10 pt-6 border-t border-[#C9A84C]/10">
-            <p className="font-[Montserrat] text-[13px] text-[#8A8279] mb-4">
+            <p className="font-[Montserrat] text-[15px] text-[#8A8279] mb-4">
               Interested in discussing how these market trends affect your gold
               trading strategy?
             </p>
             <a
               href="#contact"
               onClick={onClose}
-              className="inline-flex items-center gap-2 font-[Montserrat] text-[12px] uppercase tracking-wider text-[#0A0A0A] bg-[#C9A84C] hover:bg-[#B8973F] px-6 py-3 rounded-full font-semibold transition-colors"
+              className="inline-flex items-center gap-2 font-[Montserrat] text-[14px] uppercase tracking-wider text-[#0A0A0A] bg-[#C9A84C] hover:bg-[#B8973F] px-6 py-3 rounded-full font-semibold transition-colors"
             >
               Contact Our Advisors
               <ArrowRight size={14} />
@@ -233,7 +233,7 @@ export default function BlogSection() {
               }`}
             >
               <div className="w-8 h-px bg-[#C9A84C]" />
-              <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+              <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">
                 {t("blog.tag")}
               </span>
               <div className="w-8 h-px bg-[#C9A84C]" />
@@ -248,7 +248,7 @@ export default function BlogSection() {
               {t("blog.title")}
             </h2>
             <p
-              className={`font-[Montserrat] text-[14px] text-[#8A8279] max-w-2xl mx-auto transition-all duration-700 delay-200 ${
+              className={`font-[Montserrat] text-[16px] text-[#8A8279] max-w-2xl mx-auto transition-all duration-700 delay-200 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-6"
@@ -278,7 +278,7 @@ export default function BlogSection() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="inline-flex items-center gap-1.5 font-[Montserrat] text-[10px] uppercase tracking-wider bg-[#C9A84C] text-[#0A0A0A] px-3 py-1 font-semibold">
+                  <span className="inline-flex items-center gap-1.5 font-[Montserrat] text-[12px] uppercase tracking-wider bg-[#C9A84C] text-[#0A0A0A] px-3 py-1 font-semibold">
                     {articles[0].categoryIcon}
                     <span className="ml-1">{articles[0].category}</span>
                   </span>
@@ -287,11 +287,11 @@ export default function BlogSection() {
 
               <div className="p-8 lg:p-10 flex flex-col justify-center">
                 <div className="flex items-center gap-4 mb-5">
-                  <span className="flex items-center gap-1.5 font-[Montserrat] text-[11px] text-[#8A8279]">
+                  <span className="flex items-center gap-1.5 font-[Montserrat] text-[13px] text-[#8A8279]">
                     <Calendar size={12} />
                     {articles[0].date}
                   </span>
-                  <span className="flex items-center gap-1.5 font-[Montserrat] text-[11px] text-[#8A8279]">
+                  <span className="flex items-center gap-1.5 font-[Montserrat] text-[13px] text-[#8A8279]">
                     <Clock size={12} />
                     {articles[0].readTime}
                   </span>
@@ -301,11 +301,11 @@ export default function BlogSection() {
                   {articles[0].title}
                 </h3>
 
-                <p className="font-[Montserrat] text-[13px] text-[#8A8279] leading-relaxed mb-6">
+                <p className="font-[Montserrat] text-[15px] text-[#8A8279] leading-relaxed mb-6">
                   {articles[0].excerpt}
                 </p>
 
-                <span className="inline-flex items-center gap-2 font-[Montserrat] text-[12px] uppercase tracking-wider text-[#C9A84C] font-medium group-hover:gap-3 transition-all duration-300">
+                <span className="inline-flex items-center gap-2 font-[Montserrat] text-[14px] uppercase tracking-wider text-[#C9A84C] font-medium group-hover:gap-3 transition-all duration-300">
                   {t("blog.readMore")}
                   <ArrowRight size={14} />
                 </span>
@@ -333,7 +333,7 @@ export default function BlogSection() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1.5 font-[Montserrat] text-[10px] uppercase tracking-wider bg-[#C9A84C] text-[#0A0A0A] px-3 py-1 font-semibold">
+                    <span className="inline-flex items-center gap-1.5 font-[Montserrat] text-[12px] uppercase tracking-wider bg-[#C9A84C] text-[#0A0A0A] px-3 py-1 font-semibold">
                       {article.categoryIcon}
                       <span className="ml-1">{article.category}</span>
                     </span>
@@ -342,11 +342,11 @@ export default function BlogSection() {
 
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="flex items-center gap-1.5 font-[Montserrat] text-[11px] text-[#8A8279]">
+                    <span className="flex items-center gap-1.5 font-[Montserrat] text-[13px] text-[#8A8279]">
                       <Calendar size={12} />
                       {article.date}
                     </span>
-                    <span className="flex items-center gap-1.5 font-[Montserrat] text-[11px] text-[#8A8279]">
+                    <span className="flex items-center gap-1.5 font-[Montserrat] text-[13px] text-[#8A8279]">
                       <Clock size={12} />
                       {article.readTime}
                     </span>
@@ -356,11 +356,11 @@ export default function BlogSection() {
                     {article.title}
                   </h3>
 
-                  <p className="font-[Montserrat] text-[13px] text-[#8A8279] leading-relaxed mb-4 line-clamp-3">
+                  <p className="font-[Montserrat] text-[15px] text-[#8A8279] leading-relaxed mb-4 line-clamp-3">
                     {article.excerpt}
                   </p>
 
-                  <span className="inline-flex items-center gap-2 font-[Montserrat] text-[12px] uppercase tracking-wider text-[#C9A84C] font-medium group-hover:gap-3 transition-all duration-300">
+                  <span className="inline-flex items-center gap-2 font-[Montserrat] text-[14px] uppercase tracking-wider text-[#C9A84C] font-medium group-hover:gap-3 transition-all duration-300">
                     {t("blog.readMore")}
                     <ArrowRight size={14} />
                   </span>
@@ -374,7 +374,7 @@ export default function BlogSection() {
             <div className="text-center mt-12">
               <button
                 onClick={() => setShowAll(true)}
-                className="inline-flex items-center gap-2 font-[Montserrat] text-[12px] uppercase tracking-wider text-[#C9A84C] border border-[#C9A84C]/30 hover:border-[#C9A84C]/60 hover:bg-[#C9A84C]/5 px-8 py-3 rounded-full font-medium transition-all duration-300"
+                className="inline-flex items-center gap-2 font-[Montserrat] text-[14px] uppercase tracking-wider text-[#C9A84C] border border-[#C9A84C]/30 hover:border-[#C9A84C]/60 hover:bg-[#C9A84C]/5 px-8 py-3 rounded-full font-medium transition-all duration-300"
               >
                 View All Articles
                 <ArrowRight size={14} />
@@ -385,7 +385,7 @@ export default function BlogSection() {
             <div className="text-center mt-12">
               <button
                 onClick={() => setShowAll(false)}
-                className="inline-flex items-center gap-2 font-[Montserrat] text-[12px] uppercase tracking-wider text-[#8A8279] border border-[#8A8279]/30 hover:border-[#C9A84C]/60 hover:text-[#C9A84C] px-8 py-3 rounded-full font-medium transition-all duration-300"
+                className="inline-flex items-center gap-2 font-[Montserrat] text-[14px] uppercase tracking-wider text-[#8A8279] border border-[#8A8279]/30 hover:border-[#C9A84C]/60 hover:text-[#C9A84C] px-8 py-3 rounded-full font-medium transition-all duration-300"
               >
                 Show Less
               </button>

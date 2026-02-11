@@ -26,7 +26,7 @@ export default function ServicesSection() {
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 h-px bg-[#C9A84C]" />
-            <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">{t("services.tag")}</span>
+            <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">{t("services.tag")}</span>
             <div className="w-12 h-px bg-[#C9A84C]" />
           </div>
           <h2 className="font-[Cormorant_Garamond] text-4xl sm:text-5xl lg:text-6xl font-bold text-[#E8D5B7] leading-[1.05]">
@@ -46,7 +46,7 @@ export default function ServicesSection() {
               </div>
               <div className="p-8">
                 <h3 className="font-[Cormorant_Garamond] text-2xl font-bold text-[#E8D5B7] mb-4 group-hover:text-[#C9A84C] transition-colors duration-300">{service.title}</h3>
-                <p className="font-[Montserrat] text-[14px] leading-[1.8] text-[#8A8279]">{service.description}</p>
+                <p className="font-[Montserrat] text-[16px] leading-[1.8] text-[#8A8279]">{service.description}</p>
                 <div className="mt-6 w-0 group-hover:w-full h-px bg-gradient-to-r from-[#C9A84C] to-transparent transition-all duration-700" />
               </div>
             </div>

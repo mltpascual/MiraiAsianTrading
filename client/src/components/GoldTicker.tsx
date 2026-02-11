@@ -53,11 +53,11 @@ export default function GoldTicker() {
           <div className="flex items-center gap-5 sm:gap-8">
             {metals.map((m) => (
               <div key={m.symbol} className="flex items-center gap-2 sm:gap-3 shrink-0">
-                <span className="font-[Montserrat] text-[10px] sm:text-[11px] uppercase tracking-wider text-[#8A8279]">
+                <span className="font-[Montserrat] text-[12px] sm:text-[13px] uppercase tracking-wider text-[#8A8279]">
                   {t(nameMap[m.name] || m.name)}
                 </span>
                 <span
-                  className={`font-[Montserrat] text-[12px] sm:text-[13px] font-semibold transition-colors duration-300 ${
+                  className={`font-[Montserrat] text-[14px] sm:text-[15px] font-semibold transition-colors duration-300 ${
                     flashMap[m.symbol] === "up"
                       ? "text-emerald-300"
                       : flashMap[m.symbol] === "down"
@@ -68,7 +68,7 @@ export default function GoldTicker() {
                   ${m.pricePerOz.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </span>
                 <span
-                  className={`flex items-center gap-0.5 font-[Montserrat] text-[10px] sm:text-[11px] font-medium ${
+                  className={`flex items-center gap-0.5 font-[Montserrat] text-[12px] sm:text-[13px] font-medium ${
                     m.change >= 0 ? "text-emerald-400" : "text-red-400"
                   }`}
                 >
@@ -91,7 +91,7 @@ export default function GoldTicker() {
             ) : (
               <WifiOff size={10} className="text-[#8A8279]/50" />
             )}
-            <span className="font-[Montserrat] text-[9px] text-[#8A8279]/60 hidden lg:block">
+            <span className="font-[Montserrat] text-[11px] text-[#8A8279]/60 hidden lg:block">
               {isLive ? "LIVE" : t("ticker.note")}
               {lastUpdated && ` · ${formatTime(lastUpdated)}`}
             </span>

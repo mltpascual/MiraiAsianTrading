@@ -27,12 +27,12 @@ export default function WhyUsSection() {
         <div className={`max-w-2xl mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="flex items-center gap-4 mb-6">
             <div className="w-8 h-px bg-[#C9A84C]" />
-            <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">{t("whyUs.tag")}</span>
+            <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">{t("whyUs.tag")}</span>
           </div>
           <h2 className="font-[Cormorant_Garamond] text-4xl sm:text-5xl lg:text-6xl font-bold text-[#E8D5B7] leading-[1.05] mb-6">
             {t("whyUs.title")}
           </h2>
-          <p className="font-[Montserrat] text-[15px] leading-[1.8] text-[#8A8279]">{t("whyUs.desc")}</p>
+          <p className="font-[Montserrat] text-[17px] leading-[1.8] text-[#8A8279]">{t("whyUs.desc")}</p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#C9A84C]/10">
@@ -44,7 +44,7 @@ export default function WhyUsSection() {
                   <Icon size={22} className="text-[#C9A84C]" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-[Cormorant_Garamond] text-xl font-bold text-[#E8D5B7] mb-3 group-hover:text-[#C9A84C] transition-colors duration-300">{feature.title}</h3>
-                <p className="font-[Montserrat] text-[13px] leading-[1.8] text-[#8A8279]">{feature.description}</p>
+                <p className="font-[Montserrat] text-[15px] leading-[1.8] text-[#8A8279]">{feature.description}</p>
               </div>
             );
           })}

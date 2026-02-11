@@ -22,12 +22,12 @@ export default function CtaBanner() {
         <h2 className="font-[Cormorant_Garamond] text-3xl sm:text-4xl lg:text-5xl font-bold text-[#E8D5B7] leading-[1.1] mb-6">
           {t("cta.title")}
         </h2>
-        <p className="font-[Montserrat] text-[15px] leading-[1.8] text-[#8A8279] max-w-2xl mx-auto mb-10">{t("cta.desc")}</p>
+        <p className="font-[Montserrat] text-[17px] leading-[1.8] text-[#8A8279] max-w-2xl mx-auto mb-10">{t("cta.desc")}</p>
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="#contact" className="inline-flex items-center font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-10 py-4 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300">
+          <a href="#contact" className="inline-flex items-center font-[Montserrat] text-[14px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-10 py-4 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300">
             {t("cta.btn1")}
           </a>
-          <a href="#services" className="inline-flex items-center font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#C9A84C] border border-[#C9A84C]/40 px-10 py-4 rounded-full hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 transition-all duration-300">
+          <a href="#services" className="inline-flex items-center font-[Montserrat] text-[14px] uppercase tracking-[0.15em] text-[#C9A84C] border border-[#C9A84C]/40 px-10 py-4 rounded-full hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 transition-all duration-300">
             {t("cta.btn2")}
           </a>
         </div>

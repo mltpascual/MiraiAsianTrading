@@ -24,7 +24,7 @@ export default function ProcessSection() {
         <div className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-12 h-px bg-[#C9A84C]" />
-            <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">{t("process.tag")}</span>
+            <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">{t("process.tag")}</span>
             <div className="w-12 h-px bg-[#C9A84C]" />
           </div>
           <h2 className="font-[Cormorant_Garamond] text-4xl sm:text-5xl lg:text-6xl font-bold text-[#E8D5B7] leading-[1.05]">
@@ -44,9 +44,9 @@ export default function ProcessSection() {
                     <div className="absolute inset-2 bg-[#0D0D0D] border border-[#C9A84C]/10" />
                     <Icon size={28} className="relative z-10 text-[#C9A84C]" strokeWidth={1.5} />
                   </div>
-                  <div className="font-[Montserrat] text-[11px] tracking-[0.2em] text-[#C9A84C]/40 mb-2">Step {step.number}</div>
+                  <div className="font-[Montserrat] text-[13px] tracking-[0.2em] text-[#C9A84C]/40 mb-2">Step {step.number}</div>
                   <h3 className="font-[Cormorant_Garamond] text-xl font-bold text-[#E8D5B7] mb-3">{step.title}</h3>
-                  <p className="font-[Montserrat] text-[13px] leading-[1.8] text-[#8A8279] max-w-xs mx-auto">{step.description}</p>
+                  <p className="font-[Montserrat] text-[15px] leading-[1.8] text-[#8A8279] max-w-xs mx-auto">{step.description}</p>
                 </div>
               );
             })}

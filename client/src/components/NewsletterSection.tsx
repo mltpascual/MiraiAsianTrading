@@ -73,7 +73,7 @@ export default function NewsletterSection() {
               <h3 className="font-[Cormorant_Garamond] text-3xl font-bold text-[#E8D5B7] mb-3">
                 {t("newsletter.thankYou")}
               </h3>
-              <p className="font-[Montserrat] text-[14px] text-[#8A8279] max-w-md mx-auto">
+              <p className="font-[Montserrat] text-[16px] text-[#8A8279] max-w-md mx-auto">
                 {t("newsletter.confirmMsg")}
               </p>
             </div>
@@ -82,7 +82,7 @@ export default function NewsletterSection() {
             <div className="relative text-center">
               <div className="flex items-center justify-center gap-4 mb-6">
                 <div className="w-8 h-px bg-[#C9A84C]" />
-                <span className="font-[Montserrat] text-[11px] uppercase tracking-[0.3em] text-[#C9A84C]">
+                <span className="font-[Montserrat] text-[13px] uppercase tracking-[0.3em] text-[#C9A84C]">
                   {t("newsletter.tag")}
                 </span>
                 <div className="w-8 h-px bg-[#C9A84C]" />
@@ -91,13 +91,13 @@ export default function NewsletterSection() {
               <h2 className="font-[Cormorant_Garamond] text-3xl sm:text-4xl font-bold text-[#E8D5B7] mb-4">
                 {t("newsletter.title")}
               </h2>
-              <p className="font-[Montserrat] text-[14px] text-[#8A8279] max-w-xl mx-auto mb-8">
+              <p className="font-[Montserrat] text-[16px] text-[#8A8279] max-w-xl mx-auto mb-8">
                 {t("newsletter.desc")}
               </p>
 
               {/* Topic selection */}
               <div className="mb-6">
-                <p className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] mb-3">
+                <p className="font-[Montserrat] text-[13px] uppercase tracking-wider text-[#8A8279] mb-3">
                   {t("newsletter.interests")}
                 </p>
                 <div className="flex flex-wrap justify-center gap-2">
@@ -109,7 +109,7 @@ export default function NewsletterSection() {
                         key={topic.id}
                         type="button"
                         onClick={() => toggleTopic(topic.id)}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-full border font-[Montserrat] text-[11px] uppercase tracking-wider transition-all duration-200 ${
+                        className={`flex items-center gap-2 px-4 py-2 rounded-full border font-[Montserrat] text-[13px] uppercase tracking-wider transition-all duration-200 ${
                           isActive
                             ? "border-[#C9A84C] bg-[#C9A84C]/15 text-[#C9A84C]"
                             : "border-[#C9A84C]/10 text-[#8A8279] hover:border-[#C9A84C]/30 hover:text-[#E8D5B7]"
@@ -125,7 +125,7 @@ export default function NewsletterSection() {
 
               {/* Frequency selection */}
               <div className="mb-8">
-                <p className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] mb-3">
+                <p className="font-[Montserrat] text-[13px] uppercase tracking-wider text-[#8A8279] mb-3">
                   {t("newsletter.frequency")}
                 </p>
                 <div className="flex justify-center gap-2">
@@ -134,7 +134,7 @@ export default function NewsletterSection() {
                       key={f}
                       type="button"
                       onClick={() => setFrequency(f)}
-                      className={`px-5 py-2 rounded-full border font-[Montserrat] text-[11px] uppercase tracking-wider transition-all duration-200 ${
+                      className={`px-5 py-2 rounded-full border font-[Montserrat] text-[13px] uppercase tracking-wider transition-all duration-200 ${
                         frequency === f
                           ? "border-[#C9A84C] bg-[#C9A84C]/15 text-[#C9A84C]"
                           : "border-[#C9A84C]/10 text-[#8A8279] hover:border-[#C9A84C]/30 hover:text-[#E8D5B7]"
@@ -159,19 +159,19 @@ export default function NewsletterSection() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder={t("newsletter.placeholder")}
                     required
-                    className="w-full pl-11 pr-4 py-3.5 bg-[#0A0A0A] border border-[#C9A84C]/20 text-[#E8D5B7] font-[Montserrat] text-[13px] placeholder:text-[#8A8279]/50 focus:border-[#C9A84C]/50 focus:outline-none transition-colors rounded-full"
+                    className="w-full pl-11 pr-4 py-3.5 bg-[#0A0A0A] border border-[#C9A84C]/20 text-[#E8D5B7] font-[Montserrat] text-[15px] placeholder:text-[#8A8279]/50 focus:border-[#C9A84C]/50 focus:outline-none transition-colors rounded-full"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="flex items-center justify-center gap-2 px-8 py-3.5 bg-[#C9A84C] hover:bg-[#E8D5B7] text-[#0A0A0A] font-[Montserrat] text-[12px] uppercase tracking-wider font-semibold rounded-full transition-colors duration-300"
+                  className="flex items-center justify-center gap-2 px-8 py-3.5 bg-[#C9A84C] hover:bg-[#E8D5B7] text-[#0A0A0A] font-[Montserrat] text-[14px] uppercase tracking-wider font-semibold rounded-full transition-colors duration-300"
                 >
                   {t("newsletter.button")}
                   <ArrowRight size={14} />
                 </button>
               </form>
 
-              <p className="font-[Montserrat] text-[11px] text-[#8A8279]/50 mt-4">
+              <p className="font-[Montserrat] text-[13px] text-[#8A8279]/50 mt-4">
                 {t("newsletter.privacy")}
               </p>
             </div>
