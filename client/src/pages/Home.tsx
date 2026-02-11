@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
 import ServicesSection from "@/components/ServicesSection";
+import GoldCalculator from "@/components/GoldCalculator";
 import CertificationsSection from "@/components/CertificationsSection";
 import GallerySection from "@/components/GallerySection";
 import WhyUsSection from "@/components/WhyUsSection";
@@ -25,6 +26,7 @@ export default function Home() {
       <AboutSection />
       <ProcessSection />
       <ServicesSection />
+      <GoldCalculator />
       <CertificationsSection />
       <GallerySection />
       <WhyUsSection />
