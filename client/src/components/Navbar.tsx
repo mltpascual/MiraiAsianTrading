@@ -36,20 +36,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 border border-[#C9A84C]/40 flex items-center justify-center group-hover:border-[#C9A84C] transition-colors duration-300">
-              <span className="font-[Cormorant_Garamond] text-[#C9A84C] text-xl font-bold leading-none">
-                M
-              </span>
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-[Cormorant_Garamond] text-[#E8D5B7] text-lg font-semibold tracking-wide">
-                Mirai
-              </span>
-              <span className="font-[Montserrat] text-[#8A8279] text-[10px] uppercase tracking-[0.25em] block -mt-1">
-                Asian Trading
-              </span>
-            </div>
+          <a href="#" className="flex items-center group">
+            <img
+              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663343684150/bFCNaDGoWaeHSwNT.jpeg"
+              alt="Mirai Asian Trading"
+              className="h-12 sm:h-14 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Nav */}

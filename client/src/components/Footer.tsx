@@ -18,20 +18,12 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-12 items-start mb-16">
           {/* Logo & Description */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 border border-[#C9A84C]/40 flex items-center justify-center">
-                <span className="font-[Cormorant_Garamond] text-[#C9A84C] text-xl font-bold leading-none">
-                  M
-                </span>
-              </div>
-              <div>
-                <span className="font-[Cormorant_Garamond] text-[#E8D5B7] text-lg font-semibold tracking-wide">
-                  Mirai
-                </span>
-                <span className="font-[Montserrat] text-[#8A8279] text-[10px] uppercase tracking-[0.25em] block -mt-1">
-                  Asian Trading
-                </span>
-              </div>
+            <div className="mb-4">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663343684150/bFCNaDGoWaeHSwNT.jpeg"
+                alt="Mirai Asian Trading"
+                className="h-14 w-auto object-contain"
+              />
             </div>
             <p className="font-[Montserrat] text-[13px] leading-[1.8] text-[#8A8279] max-w-xs">
               A reliable gold trading company committed to secure, transparent

@@ -14,17 +14,17 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Visit Us",
-    value: "Mirai Asian Trading Co., Ltd.\nBangkok, Thailand",
+    value: "26 Ethiopia Street Section IV\nDoña Soledad Avenue, Better Living Subdivision\nParañaque City, Manila, Philippines",
   },
   {
     icon: Phone,
     label: "Call Us",
-    value: "+66 (0) 2-XXX-XXXX",
+    value: "0917 123 4567",
   },
   {
     icon: Mail,
     label: "Email Us",
-    value: "info@miraiasiantrading.com",
+    value: "miraiastiantrading@gmail.com",
   },
   {
     icon: Clock,
@@ -191,7 +191,7 @@ export default function ContactSection() {
                       setFormData({ ...formData, phone: e.target.value })
                     }
                     className="w-full bg-transparent border-b border-[#C9A84C]/20 focus:border-[#C9A84C] text-[#E8D5B7] font-[Montserrat] text-[14px] py-3 outline-none transition-colors duration-300 placeholder:text-[#8A8279]/40"
-                    placeholder="+66 (0) XX-XXX-XXXX"
+                    placeholder="0917 XXX XXXX"
                   />
                 </div>
 
