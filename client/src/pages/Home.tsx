@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import GoldTicker from "@/components/GoldTicker";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
@@ -21,7 +20,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#0A0A0A]">
       <Navbar />
-      <GoldTicker />
       <HeroSection />
       <AboutSection />
       <ProcessSection />

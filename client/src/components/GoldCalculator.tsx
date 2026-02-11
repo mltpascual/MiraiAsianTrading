@@ -1,25 +1,48 @@
 /*
  * DESIGN: Noir Opulence — Dark Luxury Editorial
- * Gold Price Calculator — enter weight in grams, select karat, see estimated value
+ * Gold Price Calculator — select gold type (bars, coins, jewelry),
+ * enter weight in grams, select karat, see estimated value
  * Uses real-time gold prices from useGoldPrices hook
- * Elegant dark card with gold accents, animated results
  */
 
 import { useState, useMemo } from "react";
-import { Calculator, Scale, Gem, ArrowRight, RefreshCw, Info } from "lucide-react";
+import { Calculator, Scale, Gem, ArrowRight, RefreshCw, Info, Layers, CircleDollarSign, Sparkles } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useGoldPrices } from "@/hooks/useGoldPrices";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const KARAT_OPTIONS = [
-  { value: 24, label: "24K", purity: "99.9%", desc: "Pure Gold" },
-  { value: 22, label: "22K", purity: "91.6%", desc: "Jewelry Grade" },
-  { value: 21, label: "21K", purity: "87.5%", desc: "Middle East Standard" },
-  { value: 18, label: "18K", purity: "75.0%", desc: "Fine Jewelry" },
-  { value: 14, label: "14K", purity: "58.3%", desc: "Everyday Jewelry" },
+type GoldType = "bars" | "coins" | "jewelry";
+
+const GOLD_TYPES: { value: GoldType; icon: typeof Layers; premiumPercent: number }[] = [
+  { value: "bars", icon: Layers, premiumPercent: 2.5 },
+  { value: "coins", icon: CircleDollarSign, premiumPercent: 5.0 },
+  { value: "jewelry", icon: Sparkles, premiumPercent: 12.0 },
 ];
 
-const WEIGHT_PRESETS = [1, 5, 10, 50, 100, 500];
+const KARAT_BY_TYPE: Record<GoldType, { value: number; label: string; purity: string }[]> = {
+  bars: [
+    { value: 24, label: "24K", purity: "99.9%" },
+    { value: 22, label: "22K", purity: "91.6%" },
+  ],
+  coins: [
+    { value: 24, label: "24K", purity: "99.9%" },
+    { value: 22, label: "22K", purity: "91.6%" },
+    { value: 21, label: "21K", purity: "87.5%" },
+  ],
+  jewelry: [
+    { value: 24, label: "24K", purity: "99.9%" },
+    { value: 22, label: "22K", purity: "91.6%" },
+    { value: 21, label: "21K", purity: "87.5%" },
+    { value: 18, label: "18K", purity: "75.0%" },
+    { value: 14, label: "14K", purity: "58.3%" },
+  ],
+};
+
+const WEIGHT_PRESETS_BY_TYPE: Record<GoldType, number[]> = {
+  bars: [1, 5, 10, 50, 100, 500, 1000],
+  coins: [1, 3.11, 7.78, 15.55, 31.1],
+  jewelry: [1, 5, 10, 20, 50, 100],
+};
 
 const CURRENCY_OPTIONS = [
   { code: "USD", symbol: "$", rate: 1 },
@@ -32,36 +55,66 @@ const CURRENCY_OPTIONS = [
 
 export default function GoldCalculator() {
   const { t } = useLanguage();
-  const { goldPerGram24K, isLive, lastUpdated, refetch } = useGoldPrices(60000);
+  const { goldPerGram24K, isLive, refetch } = useGoldPrices(60000);
   const { ref, isVisible } = useScrollAnimation(0.1);
 
+  const [goldType, setGoldType] = useState<GoldType>("bars");
   const [weight, setWeight] = useState<string>("10");
   const [karat, setKarat] = useState(24);
   const [currency, setCurrency] = useState("USD");
   const [showDetails, setShowDetails] = useState(false);
 
   const selectedCurrency = CURRENCY_OPTIONS.find((c) => c.code === currency) || CURRENCY_OPTIONS[0];
-  const selectedKarat = KARAT_OPTIONS.find((k) => k.value === karat) || KARAT_OPTIONS[0];
+  const karatOptions = KARAT_BY_TYPE[goldType];
+  const selectedKarat = karatOptions.find((k) => k.value === karat) || karatOptions[0];
+  const weightPresets = WEIGHT_PRESETS_BY_TYPE[goldType];
+  const selectedGoldType = GOLD_TYPES.find((g) => g.value === goldType)!;
+
+  // Reset karat if not available for new gold type
+  const handleGoldTypeChange = (type: GoldType) => {
+    setGoldType(type);
+    const availableKarats = KARAT_BY_TYPE[type];
+    if (!availableKarats.find((k) => k.value === karat)) {
+      setKarat(availableKarats[0].value);
+    }
+    // Reset weight to a sensible default
+    setWeight(type === "coins" ? "31.1" : "10");
+  };
 
   const calculation = useMemo(() => {
     const w = parseFloat(weight) || 0;
-    const pricePerGramAtKarat = goldPerGram24K * (karat / 24);
-    const totalUSD = w * pricePerGramAtKarat;
+    const basePrice = goldPerGram24K * (karat / 24);
+    const premium = basePrice * (selectedGoldType.premiumPercent / 100);
+    const pricePerGramWithPremium = basePrice + premium;
+    const totalUSD = w * pricePerGramWithPremium;
     const totalLocal = totalUSD * selectedCurrency.rate;
-    const pricePerGramLocal = pricePerGramAtKarat * selectedCurrency.rate;
+    const pricePerGramLocal = pricePerGramWithPremium * selectedCurrency.rate;
+    const basePriceLocal = basePrice * selectedCurrency.rate;
+    const premiumLocal = premium * selectedCurrency.rate;
 
     return {
       weight: w,
-      pricePerGramUSD: pricePerGramAtKarat,
+      pricePerGramUSD: pricePerGramWithPremium,
       pricePerGramLocal,
+      basePriceLocal,
+      premiumLocal,
       totalUSD,
       totalLocal,
       purity: selectedKarat.purity,
+      premiumPercent: selectedGoldType.premiumPercent,
     };
-  }, [weight, karat, currency, goldPerGram24K, selectedCurrency.rate, selectedKarat.purity]);
+  }, [weight, karat, currency, goldPerGram24K, selectedCurrency.rate, selectedKarat.purity, selectedGoldType.premiumPercent]);
 
   const formatNumber = (n: number, decimals: number = 2) =>
     n.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
+
+  const formatWeight = (w: number) => {
+    if (w === 31.1) return "1 oz";
+    if (w === 15.55) return "½ oz";
+    if (w === 7.78) return "¼ oz";
+    if (w === 3.11) return "⅒ oz";
+    return `${w}g`;
+  };
 
   return (
     <section id="calculator" className="relative py-24 sm:py-32 bg-[#0A0A0A]">
@@ -95,7 +148,7 @@ export default function GoldCalculator() {
         </div>
 
         {/* Calculator card */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="bg-[#111111] border border-[#C9A84C]/15 rounded-2xl overflow-hidden">
             {/* Top status bar */}
             <div className="flex items-center justify-between px-6 py-3 bg-[#0D0D0D] border-b border-[#C9A84C]/10">
@@ -117,6 +170,47 @@ export default function GoldCalculator() {
             </div>
 
             <div className="p-6 sm:p-8">
+              {/* Gold Type Selector — NEW */}
+              <div className="mb-8">
+                <label className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#8A8279] mb-3 block">
+                  {t("calc.goldType")}
+                </label>
+                <div className="grid grid-cols-3 gap-3">
+                  {GOLD_TYPES.map((type) => {
+                    const Icon = type.icon;
+                    const isActive = goldType === type.value;
+                    return (
+                      <button
+                        key={type.value}
+                        onClick={() => handleGoldTypeChange(type.value)}
+                        className={`relative flex flex-col items-center gap-2 py-5 px-4 rounded-xl border transition-all duration-300 group ${
+                          isActive
+                            ? "border-[#C9A84C] bg-gradient-to-b from-[#C9A84C]/15 to-[#C9A84C]/5 shadow-[0_0_20px_rgba(201,168,76,0.1)]"
+                            : "border-[#C9A84C]/10 hover:border-[#C9A84C]/30 hover:bg-[#C9A84C]/5"
+                        }`}
+                      >
+                        <div className={`p-2.5 rounded-full transition-colors duration-300 ${
+                          isActive ? "bg-[#C9A84C]/20" : "bg-[#C9A84C]/5 group-hover:bg-[#C9A84C]/10"
+                        }`}>
+                          <Icon size={20} className={`transition-colors duration-300 ${isActive ? "text-[#C9A84C]" : "text-[#8A8279] group-hover:text-[#C9A84C]"}`} />
+                        </div>
+                        <span className={`font-[Montserrat] text-[12px] font-semibold uppercase tracking-wider transition-colors duration-300 ${
+                          isActive ? "text-[#C9A84C]" : "text-[#E8D5B7] group-hover:text-[#C9A84C]"
+                        }`}>
+                          {t(`calc.type.${type.value}`)}
+                        </span>
+                        <span className="font-[Montserrat] text-[9px] text-[#8A8279]">
+                          +{type.premiumPercent}% {t("calc.premium")}
+                        </span>
+                        {isActive && (
+                          <div className="absolute -top-px left-1/2 -translate-x-1/2 w-12 h-0.5 bg-[#C9A84C] rounded-full" />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left: Input controls */}
                 <div className="space-y-6">
@@ -142,7 +236,7 @@ export default function GoldCalculator() {
                     </div>
                     {/* Weight presets */}
                     <div className="flex flex-wrap gap-2 mt-3">
-                      {WEIGHT_PRESETS.map((w) => (
+                      {weightPresets.map((w) => (
                         <button
                           key={w}
                           onClick={() => setWeight(String(w))}
@@ -152,7 +246,7 @@ export default function GoldCalculator() {
                               : "border-[#C9A84C]/10 text-[#8A8279] hover:border-[#C9A84C]/30 hover:text-[#E8D5B7]"
                           }`}
                         >
-                          {w}g
+                          {formatWeight(w)}
                         </button>
                       ))}
                     </div>
@@ -164,8 +258,8 @@ export default function GoldCalculator() {
                       <Gem size={13} className="text-[#C9A84C]" />
                       {t("calc.karat")}
                     </label>
-                    <div className="grid grid-cols-5 gap-2">
-                      {KARAT_OPTIONS.map((k) => (
+                    <div className={`grid gap-2 ${karatOptions.length <= 3 ? "grid-cols-3" : "grid-cols-5"}`}>
+                      {karatOptions.map((k) => (
                         <button
                           key={k.value}
                           onClick={() => setKarat(k.value)}
@@ -175,11 +269,7 @@ export default function GoldCalculator() {
                               : "border-[#C9A84C]/10 hover:border-[#C9A84C]/30"
                           }`}
                         >
-                          <span
-                            className={`font-[Montserrat] text-[13px] font-bold ${
-                              karat === k.value ? "text-[#C9A84C]" : "text-[#E8D5B7]"
-                            }`}
-                          >
+                          <span className={`font-[Montserrat] text-[13px] font-bold ${karat === k.value ? "text-[#C9A84C]" : "text-[#E8D5B7]"}`}>
                             {k.label}
                           </span>
                           <span className="font-[Montserrat] text-[9px] text-[#8A8279] mt-0.5">
@@ -216,14 +306,19 @@ export default function GoldCalculator() {
                 {/* Right: Results */}
                 <div className="flex flex-col">
                   <div className="bg-gradient-to-br from-[#1A1508] via-[#151005] to-[#0D0D0D] border border-[#C9A84C]/20 rounded-xl p-6 sm:p-8 flex-1 flex flex-col justify-between">
-                    {/* Main result */}
+                    {/* Gold type badge */}
                     <div>
-                      <div className="flex items-center gap-2 mb-2">
+                      <div className="flex items-center justify-between mb-4">
                         <span className="font-[Montserrat] text-[11px] uppercase tracking-wider text-[#C9A84C]/70">
                           {t("calc.estimated")}
                         </span>
+                        <span className="font-[Montserrat] text-[9px] uppercase tracking-wider text-[#8A8279] bg-[#C9A84C]/10 px-3 py-1 rounded-full">
+                          {t(`calc.type.${goldType}`)} · {selectedKarat.label}
+                        </span>
                       </div>
-                      <div className="mb-6">
+
+                      {/* Main result */}
+                      <div className="mb-2">
                         <span className="font-[Cormorant_Garamond] text-5xl sm:text-6xl font-bold text-[#E8D5B7] leading-none">
                           {selectedCurrency.symbol}
                           {calculation.totalLocal >= 1000000
@@ -236,27 +331,33 @@ export default function GoldCalculator() {
                       </div>
 
                       {currency !== "USD" && (
-                        <div className="font-[Montserrat] text-[13px] text-[#8A8279] mb-6">
+                        <div className="font-[Montserrat] text-[12px] text-[#8A8279] mb-4">
                           ≈ ${formatNumber(calculation.totalUSD)} USD
                         </div>
                       )}
 
-                      {/* Breakdown */}
+                      {/* Premium notice */}
+                      <div className="flex items-center gap-2 mb-5 px-3 py-2 bg-[#C9A84C]/5 rounded-lg border border-[#C9A84C]/10">
+                        <Info size={11} className="text-[#C9A84C] shrink-0" />
+                        <span className="font-[Montserrat] text-[10px] text-[#8A8279]">
+                          {t("calc.premiumNote")} <span className="text-[#C9A84C]">+{calculation.premiumPercent}%</span> {t(`calc.type.${goldType}`).toLowerCase()} {t("calc.premiumSuffix")}
+                        </span>
+                      </div>
+
+                      {/* Breakdown toggle */}
                       <button
                         onClick={() => setShowDetails(!showDetails)}
-                        className="flex items-center gap-2 font-[Montserrat] text-[11px] uppercase tracking-wider text-[#C9A84C]/60 hover:text-[#C9A84C] transition-colors mb-4"
+                        className="flex items-center gap-1.5 font-[Montserrat] text-[11px] uppercase tracking-wider text-[#C9A84C]/70 hover:text-[#C9A84C] transition-colors mb-4"
                       >
                         <Info size={12} />
                         {showDetails ? t("calc.hideDetails") : t("calc.showDetails")}
                       </button>
 
                       {showDetails && (
-                        <div className="space-y-3 border-t border-[#C9A84C]/10 pt-4 animate-in fade-in duration-300">
+                        <div className="space-y-2.5 border-t border-[#C9A84C]/10 pt-4 animate-in fade-in duration-300">
                           <div className="flex justify-between font-[Montserrat] text-[12px]">
-                            <span className="text-[#8A8279]">{t("calc.pricePerGram")}</span>
-                            <span className="text-[#E8D5B7]">
-                              {selectedCurrency.symbol}{formatNumber(calculation.pricePerGramLocal)}
-                            </span>
+                            <span className="text-[#8A8279]">{t("calc.goldType")}</span>
+                            <span className="text-[#E8D5B7]">{t(`calc.type.${goldType}`)}</span>
                           </div>
                           <div className="flex justify-between font-[Montserrat] text-[12px]">
                             <span className="text-[#8A8279]">{t("calc.weightLabel")}</span>
@@ -267,12 +368,24 @@ export default function GoldCalculator() {
                             <span className="text-[#E8D5B7]">{selectedKarat.label} ({calculation.purity})</span>
                           </div>
                           <div className="flex justify-between font-[Montserrat] text-[12px]">
-                            <span className="text-[#8A8279]">{t("calc.goldPer24K")}</span>
+                            <span className="text-[#8A8279]">{t("calc.basePrice")}</span>
                             <span className="text-[#E8D5B7]">
-                              ${formatNumber(goldPerGram24K)}/g
+                              {selectedCurrency.symbol}{formatNumber(calculation.basePriceLocal)}/g
                             </span>
                           </div>
-                          <div className="border-t border-[#C9A84C]/10 pt-3 flex justify-between font-[Montserrat] text-[12px]">
+                          <div className="flex justify-between font-[Montserrat] text-[12px]">
+                            <span className="text-[#8A8279]">{t("calc.premium")} (+{calculation.premiumPercent}%)</span>
+                            <span className="text-[#C9A84C]">
+                              +{selectedCurrency.symbol}{formatNumber(calculation.premiumLocal)}/g
+                            </span>
+                          </div>
+                          <div className="border-t border-[#C9A84C]/10 pt-2.5 flex justify-between font-[Montserrat] text-[12px]">
+                            <span className="text-[#8A8279]">{t("calc.pricePerGram")}</span>
+                            <span className="text-[#E8D5B7] font-semibold">
+                              {selectedCurrency.symbol}{formatNumber(calculation.pricePerGramLocal)}/g
+                            </span>
+                          </div>
+                          <div className="flex justify-between font-[Montserrat] text-[12px]">
                             <span className="text-[#8A8279]">{t("calc.formula")}</span>
                             <span className="text-[#C9A84C] text-[11px]">
                               {calculation.weight}g × {selectedCurrency.symbol}{formatNumber(calculation.pricePerGramLocal)}/g
