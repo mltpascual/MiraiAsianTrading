@@ -4,6 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { LanguageProvider } from "./contexts/LanguageContext";
 import Home from "./pages/Home";
 
 function Router() {
@@ -20,20 +21,22 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
-        <TooltipProvider>
-          <Toaster
-            toastOptions={{
-              style: {
-                background: "#0D0D0D",
-                border: "1px solid rgba(201, 168, 76, 0.2)",
-                color: "#E8D5B7",
-                fontFamily: "Montserrat, system-ui, sans-serif",
-                fontSize: "13px",
-              },
-            }}
-          />
-          <Router />
-        </TooltipProvider>
+        <LanguageProvider>
+          <TooltipProvider>
+            <Toaster
+              toastOptions={{
+                style: {
+                  background: "#0D0D0D",
+                  border: "1px solid rgba(201, 168, 76, 0.2)",
+                  color: "#E8D5B7",
+                  fontFamily: "Montserrat, system-ui, sans-serif",
+                  fontSize: "13px",
+                },
+              }}
+            />
+            <Router />
+          </TooltipProvider>
+        </LanguageProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

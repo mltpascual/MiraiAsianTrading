@@ -1,21 +1,21 @@
 /*
  * DESIGN: Noir Opulence — Dark Luxury Editorial
- * Minimal footer with gold accents
- * Logo, navigation, and copyright
+ * Footer with social media links, i18n
  */
 
 import { toast } from "sonner";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Facebook, Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="relative bg-[#050505] py-16">
-      {/* Gold divider at top */}
       <div className="gold-divider w-full absolute top-0" />
-
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-12 items-start mb-16">
+        <div className="grid md:grid-cols-4 gap-12 items-start mb-16">
           {/* Logo & Description */}
           <div className="md:col-span-1">
             <div className="mb-4">
@@ -25,29 +25,53 @@ export default function Footer() {
                 className="h-14 w-auto object-contain"
               />
             </div>
-            <p className="font-[Montserrat] text-[13px] leading-[1.8] text-[#8A8279] max-w-xs">
-              A reliable gold trading company committed to secure, transparent
-              transactions and building lasting client trust.
+            <p className="font-[Montserrat] text-[13px] leading-[1.8] text-[#8A8279] max-w-xs mb-6">
+              {t("footer.desc")}
             </p>
+            {/* Social Media Links */}
+            <div className="flex gap-3">
+              <a
+                href="https://www.facebook.com/share/1CUnXiMKeG/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 border border-[#C9A84C]/20 flex items-center justify-center hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 transition-all duration-300"
+                aria-label="Facebook"
+              >
+                <Facebook size={16} className="text-[#C9A84C]" />
+              </a>
+              <a
+                href="#"
+                onClick={(e) => { e.preventDefault(); toast.info("Instagram coming soon!"); }}
+                className="w-9 h-9 border border-[#C9A84C]/20 flex items-center justify-center hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <Instagram size={16} className="text-[#C9A84C]" />
+              </a>
+              <a
+                href="mailto:miraiastiantrading@gmail.com"
+                className="w-9 h-9 border border-[#C9A84C]/20 flex items-center justify-center hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 transition-all duration-300"
+                aria-label="Email"
+              >
+                <Mail size={16} className="text-[#C9A84C]" />
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-[Montserrat] text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
-              Quick Links
+              {t("footer.quickLinks")}
             </h4>
             <nav className="space-y-3">
               {[
-                { label: "About Us", href: "#about" },
-                { label: "Our Services", href: "#services" },
-                { label: "Why Choose Us", href: "#why-us" },
-                { label: "Contact", href: "#contact" },
+                { label: t("nav.about"), href: "#about" },
+                { label: t("nav.services"), href: "#services" },
+                { label: t("nav.gallery"), href: "#gallery" },
+                { label: t("nav.news"), href: "#news" },
+                { label: t("nav.faq"), href: "#faq" },
+                { label: t("nav.contact"), href: "#contact" },
               ].map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="block font-[Montserrat] text-[13px] text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300"
-                >
+                <a key={link.href} href={link.href} className="block font-[Montserrat] text-[13px] text-[#8A8279] hover:text-[#C9A84C] transition-colors duration-300">
                   {link.label}
                 </a>
               ))}
@@ -57,46 +81,44 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="font-[Montserrat] text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
-              Our Services
+              {t("footer.services")}
             </h4>
             <nav className="space-y-3">
               {[
-                "Gold Bar Trading",
-                "Gold Coin Trading",
-                "Gold Jewelry Trading",
-                "Investment Advisory",
+                t("footer.svc1"),
+                t("footer.svc2"),
+                t("footer.svc3"),
+                t("footer.svc4"),
               ].map((item) => (
-                <span
-                  key={item}
-                  className="block font-[Montserrat] text-[13px] text-[#8A8279]"
-                >
-                  {item}
-                </span>
+                <span key={item} className="block font-[Montserrat] text-[13px] text-[#8A8279]">{item}</span>
               ))}
             </nav>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="font-[Montserrat] text-[11px] uppercase tracking-[0.2em] text-[#C9A84C] mb-6">
+              {t("footer.contactInfo")}
+            </h4>
+            <div className="space-y-3 font-[Montserrat] text-[13px] text-[#8A8279]">
+              <p>26 Ethiopia Street Section IV<br />Doña Soledad Avenue<br />Parañaque City, Philippines</p>
+              <p>0917 123 4567</p>
+              <p>miraiastiantrading@gmail.com</p>
+            </div>
           </div>
         </div>
 
         {/* Bottom bar */}
         <div className="border-t border-[#C9A84C]/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="font-[Montserrat] text-[11px] text-[#8A8279]/60 tracking-wide">
-            &copy; {currentYear} Mirai Asian Trading Co., Ltd. All rights
-            reserved.
+            &copy; {currentYear} Mirai Asian Trading Co., Ltd. {t("footer.rights")}
           </p>
           <div className="flex gap-6">
-            <a
-              href="#"
-              className="font-[Montserrat] text-[11px] text-[#8A8279]/60 hover:text-[#C9A84C] transition-colors duration-300"
-              onClick={(e) => { e.preventDefault(); toast("Feature coming soon"); }}
-            >
-              Privacy Policy
+            <a href="#" className="font-[Montserrat] text-[11px] text-[#8A8279]/60 hover:text-[#C9A84C] transition-colors duration-300" onClick={(e) => { e.preventDefault(); toast("Feature coming soon"); }}>
+              {t("footer.privacy")}
             </a>
-            <a
-              href="#"
-              className="font-[Montserrat] text-[11px] text-[#8A8279]/60 hover:text-[#C9A84C] transition-colors duration-300"
-              onClick={(e) => { e.preventDefault(); toast("Feature coming soon"); }}
-            >
-              Terms of Service
+            <a href="#" className="font-[Montserrat] text-[11px] text-[#8A8279]/60 hover:text-[#C9A84C] transition-colors duration-300" onClick={(e) => { e.preventDefault(); toast("Feature coming soon"); }}>
+              {t("footer.terms")}
             </a>
           </div>
         </div>
@@ -104,4 +126,3 @@ export default function Footer() {
     </footer>
   );
 }
-
