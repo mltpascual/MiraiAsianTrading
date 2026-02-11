@@ -43,13 +43,13 @@ export default function CtaBanner() {
         <div className="flex flex-wrap justify-center gap-4">
           <a
             href="#contact"
-            className="inline-flex items-center font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-10 py-4 hover:bg-[#E8D5B7] transition-colors duration-300"
+            className="inline-flex items-center font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-10 py-4 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300"
           >
             Contact Us Today
           </a>
           <a
             href="#services"
-            className="inline-flex items-center font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#C9A84C] border border-[#C9A84C]/40 px-10 py-4 hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 transition-all duration-300"
+            className="inline-flex items-center font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#C9A84C] border border-[#C9A84C]/40 px-10 py-4 rounded-full hover:border-[#C9A84C] hover:bg-[#C9A84C]/10 transition-all duration-300"
           >
             View Services
           </a>

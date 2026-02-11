@@ -65,7 +65,7 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              className="font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-6 py-2.5 hover:bg-[#E8D5B7] transition-colors duration-300"
+              className="font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-6 py-2.5 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300"
             >
               Get Started
             </a>
@@ -102,7 +102,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setMobileOpen(false)}
-            className="inline-block font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-6 py-2.5 hover:bg-[#E8D5B7] transition-colors duration-300 mt-2"
+            className="inline-block font-[Montserrat] text-[12px] uppercase tracking-[0.15em] text-[#0A0A0A] bg-[#C9A84C] px-6 py-2.5 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300 mt-2"
           >
             Get Started
           </a>

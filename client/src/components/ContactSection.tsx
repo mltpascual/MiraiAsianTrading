@@ -219,7 +219,7 @@ export default function ContactSection() {
                 {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full font-[Montserrat] text-[12px] uppercase tracking-[0.2em] text-[#0A0A0A] bg-[#C9A84C] py-4 hover:bg-[#E8D5B7] transition-colors duration-300 mt-4"
+                  className="w-full font-[Montserrat] text-[12px] uppercase tracking-[0.2em] text-[#0A0A0A] bg-[#C9A84C] py-4 rounded-full hover:bg-[#E8D5B7] transition-colors duration-300 mt-4"
                 >
                   Send Inquiry
                 </button>
