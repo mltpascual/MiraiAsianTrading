@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="mb-4">
               <img
-                src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663343684150/bFCNaDGoWaeHSwNT.jpeg"
+                src="https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/NNmPiDzXNWbiECjL4br1ji_1770804347160_na1fn_bWlyYWktbG9nby1uZXc.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L05ObVBpRHpYTldiaUVDakw0YnIxamlfMTc3MDgwNDM0NzE2MF9uYTFmbl9iV2x5WVdrdGJHOW5ieTF1WlhjLnBuZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=VJ2lUAmVD4SfvjF22W~gECkhNGQ-aL-tQ-Ox2ySWnZVSUy14k~F9eRu-GTqfU-RM9g8w3YdEMsTzgTl-g1MXcfbTGHuj6G9RXVQr-dt2OkljLJBRcuV9t-w8F39xcAo4RmLx0Ab79p0~uRF6bJGkXvTrvyqMfiHlufOJcwzJm~9ZChN6YovvyPrsPD-gO9QapA9nAHxQdzoEjsHoKS-OL5dB76L~drp9uhh7Jb02zr2XsQcf25aFDubdv6nUgjpMSnJZeMcvVw4g0Dco8gQhT3exK3qCRZbp9kk4lmHcEvbEGzt7aRO5z41iWuPow3H1sIb9C3AIJg9tscJr3SDT1Q__"
                 alt="Mirai Asian Trading"
                 className="h-14 w-auto object-contain"
               />
