@@ -54,7 +54,7 @@ No database, backend server, or API keys are required. This is a fully static, c
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/mirai-asian-trading.git
+git clone https://github.com/mltpascual/MiraiAsianTrading.git
 cd mirai-asian-trading
 ```
 
@@ -139,7 +139,19 @@ mirai-asian-trading/
 │   └── index.ts                      # Express server (production static serving)
 ├── shared/
 │   └── const.ts                      # Shared constants
-├── DESIGN.md                         # Comprehensive design system documentation
+├── DESIGN.md                         # Visual design system documentation
+├── DEVELOPMENT_GUIDELINES.md         # Coding standards and best practices
+├── C4-Documentation/
+│   └── c4-context.md                 # C4 architecture diagrams (context, container, component)
+├── conductor/
+│   ├── index.md                      # Documentation navigation hub
+│   ├── product.md                    # Product vision and roadmap
+│   ├── product-guidelines.md         # Brand voice and messaging
+│   ├── tech-stack.md                 # Technology choices and dependencies
+│   ├── workflow.md                   # Development practices and deployment
+│   ├── tracks.md                     # Work unit registry
+│   └── code_styleguides/
+│       └── typescript.md             # TypeScript/React style guide
 ├── vercel.json                       # Vercel deployment configuration
 ├── vite.config.ts                    # Vite dev config
 ├── vite.config.vercel.ts             # Vite production config (Vercel-optimized)
@@ -246,7 +258,7 @@ A GitHub repository containing the project code.
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/your-username/mirai-asian-trading.git
+git remote add origin https://github.com/mltpascual/MiraiAsianTrading.git
 git push -u origin main
 ```
 
@@ -321,17 +333,22 @@ Articles are defined as a static array in `client/src/components/BlogSection.tsx
 
 ---
 
-## Design System
+## Documentation Suite
 
-A comprehensive design system document is maintained at `DESIGN.md` in the project root. It covers:
+This project includes a comprehensive documentation package:
 
-- Color palette with OKLCH values and usage roles
-- Typography rules with Cormorant Garamond + Montserrat pairing
-- Component styling specifications (buttons, cards, inputs, navigation)
-- Layout principles and grid patterns
-- Animation and interaction guidelines
-- Responsive breakpoint behavior
-- Accessibility standards
+| Document | Path | Description |
+|----------|------|-------------|
+| **DESIGN.md** | [`DESIGN.md`](./DESIGN.md) | Visual design system — colors, typography, components, animations |
+| **DEVELOPMENT_GUIDELINES.md** | [`DEVELOPMENT_GUIDELINES.md`](./DEVELOPMENT_GUIDELINES.md) | Coding standards, security policies, testing strategies |
+| **C4 Architecture** | [`C4-Documentation/c4-context.md`](./C4-Documentation/c4-context.md) | System context, container, and component diagrams |
+| **Conductor Index** | [`conductor/index.md`](./conductor/index.md) | Navigation hub for all project context artifacts |
+| **Product Context** | [`conductor/product.md`](./conductor/product.md) | Product vision, goals, features, and roadmap |
+| **Product Guidelines** | [`conductor/product-guidelines.md`](./conductor/product-guidelines.md) | Brand voice, terminology, and messaging standards |
+| **Tech Stack** | [`conductor/tech-stack.md`](./conductor/tech-stack.md) | Technology choices, dependencies, and architecture |
+| **Workflow** | [`conductor/workflow.md`](./conductor/workflow.md) | Development practices, quality gates, and deployment |
+| **Tracks** | [`conductor/tracks.md`](./conductor/tracks.md) | Work unit registry and status tracking |
+| **TypeScript Style Guide** | [`conductor/code_styleguides/typescript.md`](./conductor/code_styleguides/typescript.md) | TypeScript/React coding conventions |
 
 ---
 
