@@ -1,12 +1,12 @@
 /*
  * DESIGN: Noir Opulence — Dark Luxury Editorial
- * Real-time gold price ticker bar using live API data
+ * Real-time gold price ticker bar — full-width scrolling marquee
  * Shows Gold, Silver, Platinum, Palladium with change indicators
  * Animated price updates with green/red coloring
  */
 
 import { useState, useEffect, useRef } from "react";
-import { TrendingUp, TrendingDown, RefreshCw, Wifi, WifiOff } from "lucide-react";
+import { TrendingUp, TrendingDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useGoldPrices } from "@/hooks/useGoldPrices";
 
@@ -19,7 +19,7 @@ const nameMap: Record<string, string> = {
 
 export default function GoldTicker() {
   const { t } = useLanguage();
-  const { metals, isLive, lastUpdated, refetch } = useGoldPrices(60000);
+  const { metals, refetch } = useGoldPrices(60000);
   const [flashMap, setFlashMap] = useState<Record<string, "up" | "down" | null>>({});
   const prevPricesRef = useRef<Record<string, number>>({});
 
@@ -40,71 +40,71 @@ export default function GoldTicker() {
     }
   }, [metals]);
 
-  const formatTime = (date: Date | null) => {
-    if (!date) return "";
-    return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-  };
+  // Auto-refresh every 60s
+  useEffect(() => {
+    const interval = setInterval(refetch, 60000);
+    return () => clearInterval(interval);
+  }, [refetch]);
+
+  // Build the ticker items — duplicate for seamless loop
+  const renderTickerItems = () =>
+    metals.map((m) => (
+      <div key={m.symbol} className="flex items-center gap-2 sm:gap-3 shrink-0 px-4 sm:px-6 lg:px-8">
+        <span className="font-[Montserrat] text-[12px] sm:text-[13px] uppercase tracking-widest text-[#8A8279] whitespace-nowrap">
+          {t(nameMap[m.name] || m.name)} ({m.symbol})
+        </span>
+        <span
+          className={`font-[Montserrat] text-[14px] sm:text-[16px] font-bold transition-colors duration-300 whitespace-nowrap ${
+            flashMap[m.symbol] === "up"
+              ? "text-emerald-300"
+              : flashMap[m.symbol] === "down"
+              ? "text-red-300"
+              : "text-[#E8D5B7]"
+          }`}
+        >
+          ${m.pricePerOz.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+        </span>
+        <span
+          className={`flex items-center gap-0.5 font-[Montserrat] text-[12px] sm:text-[13px] font-semibold whitespace-nowrap ${
+            m.change >= 0 ? "text-emerald-400" : "text-red-400"
+          }`}
+        >
+          {m.change >= 0 ? (
+            <TrendingUp size={12} />
+          ) : (
+            <TrendingDown size={12} />
+          )}
+          {m.change >= 0 ? "+" : ""}
+          {m.changePercent.toFixed(2)}%
+        </span>
+        {/* Gold separator dot */}
+        <span className="text-[#C9A84C]/30 text-[10px] ml-2">●</span>
+      </div>
+    ));
 
   return (
-    <div className="bg-[#0D0D0D] border-b border-[#C9A84C]/10 py-2 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4 sm:gap-6 lg:gap-8 overflow-x-auto scrollbar-hide">
-          {/* Metal prices */}
-          <div className="flex items-center gap-5 sm:gap-8">
-            {metals.map((m) => (
-              <div key={m.symbol} className="flex items-center gap-2 sm:gap-3 shrink-0">
-                <span className="font-[Montserrat] text-[12px] sm:text-[13px] uppercase tracking-wider text-[#8A8279]">
-                  {t(nameMap[m.name] || m.name)}
-                </span>
-                <span
-                  className={`font-[Montserrat] text-[14px] sm:text-[15px] font-semibold transition-colors duration-300 ${
-                    flashMap[m.symbol] === "up"
-                      ? "text-emerald-300"
-                      : flashMap[m.symbol] === "down"
-                      ? "text-red-300"
-                      : "text-[#E8D5B7]"
-                  }`}
-                >
-                  ${m.pricePerOz.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                </span>
-                <span
-                  className={`flex items-center gap-0.5 font-[Montserrat] text-[12px] sm:text-[13px] font-medium ${
-                    m.change >= 0 ? "text-emerald-400" : "text-red-400"
-                  }`}
-                >
-                  {m.change >= 0 ? (
-                    <TrendingUp size={11} />
-                  ) : (
-                    <TrendingDown size={11} />
-                  )}
-                  {m.change >= 0 ? "+" : ""}
-                  {m.changePercent.toFixed(2)}%
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* Status indicator */}
-          <div className="flex items-center gap-2 shrink-0 ml-auto">
-            {isLive ? (
-              <Wifi size={10} className="text-emerald-400" />
-            ) : (
-              <WifiOff size={10} className="text-[#8A8279]/50" />
-            )}
-            <span className="font-[Montserrat] text-[11px] text-[#8A8279]/60 hidden lg:block">
-              {isLive ? "LIVE" : t("ticker.note")}
-              {lastUpdated && ` · ${formatTime(lastUpdated)}`}
-            </span>
-            <button
-              onClick={refetch}
-              className="p-1 hover:bg-[#C9A84C]/10 rounded transition-colors"
-              aria-label="Refresh prices"
-            >
-              <RefreshCw size={10} className="text-[#8A8279]/40 hover:text-[#C9A84C]" />
-            </button>
-          </div>
+    <div className="bg-[#0D0D0D] border-b border-[#C9A84C]/15 py-2.5 w-full overflow-hidden">
+      <div className="ticker-scroll flex items-center w-full">
+        <div className="flex items-center animate-ticker-scroll">
+          {renderTickerItems()}
+          {renderTickerItems()}
+          {renderTickerItems()}
         </div>
       </div>
+
+      <style>{`
+        @keyframes tickerScroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.333%); }
+        }
+        .animate-ticker-scroll {
+          animation: tickerScroll 30s linear infinite;
+          will-change: transform;
+        }
+        .animate-ticker-scroll:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
     </div>
   );
 }
