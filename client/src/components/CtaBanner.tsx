@@ -6,7 +6,7 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const GOLD_TEXTURE = "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/h8zwkf8UJ0XdQ5iGPfBf0a-img-5_1770802597000_na1fn_Z29sZC1hYnN0cmFjdC10ZXh0dXJl.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L2g4endrZjhVSjBYZFE1aUdQZkJmMGEtaW1nLTVfMTc3MDgwMjU5NzAwMF9uYTFmbl9aMjlzWkMxaFluTjBjbUZqZEMxMFpYaDBkWEpsLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=kAqQkRAmmkjUqglhfZ13dYtt-vtYMCyjZQ-a49k3ASy5Wbiy6zb-T8lTAYg937e9XZthCXnZGWWh~WtmpUbVhRCRKQq6wtFh3rJALZTl1I0p9VF1Mj0zVlnUJWtZ-aeUFhOAo~VREpOYczO8YslZqD7MR5zAUearMmRErCix1aBV4dPEZm43sAHXjAqUofImo2QnJK6bKBrEjhy3KdrUjc8k7QNNWBtzF2wRQsgCzmPWB3RhgpFCVn9LCEdtA8Gr-wHzvJcqMV2DZXhDhtn7DjF1gOVHjK1FOtL26LdPBE78CpJhXGtCCgv7AKaYeLnTRIayzVkbEZRuEv-gHECioA__";
+const GOLD_TEXTURE = "/images/gold-abstract-texture.webp";
 
 export default function CtaBanner() {
   const { ref, isVisible } = useScrollAnimation(0.15);

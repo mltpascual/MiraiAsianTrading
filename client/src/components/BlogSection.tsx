@@ -36,7 +36,7 @@ const articles: Article[] = [
     readTime: "5 min read",
     category: "Market Analysis",
     categoryIcon: <TrendingUp size={12} />,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/MIH9YpTvkC8ONk607vw9So-img-1_1770831335000_na1fn_YmxvZy1nb2xkLXN1cmdl.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L01JSDlZcFR2a0M4T05rNjA3dnc5U28taW1nLTFfMTc3MDgzMTMzNTAwMF9uYTFmbl9ZbXh2WnkxbmIyeGtMWE4xY21kbC5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=XbTxR42kdJ8eEruiFJt9v1aOWUjjud8JkG9qpACs5KjKDPewvbgiOXxW4HBD5h9LSPwSkFjOdJZ5h8OiDPJ80~CGtXLijkKVVEDs7RwdhrFWKHbZ93b8jibdowMidRUtq3olTvKGMx36gqAPacTp-zsMPTKI-egbymOKa6Dc1ENzQP-jVXnLtcWlFY~ZM5UsnEcHUYWw5v30tp9Pr31fSxYffR5Zml1cE0ciBserIAvW-akQ4zDimuDm1LsndaZyiVmNCxjf5hFBYIBS3hPvE3yxJMhmyilugBzYbMUPqLVgemi9CdMdqorYGk5CtsCGdKEN3~1rq77tYQbxpHYEcA__",
+    image: "/images/blog-gold-surge.webp",
   },
   {
     title: "Central Banks Bought 863 Tonnes of Gold in 2025 — What It Means for 2026",
@@ -52,7 +52,7 @@ const articles: Article[] = [
     readTime: "6 min read",
     category: "Industry Report",
     categoryIcon: <BarChart3 size={12} />,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/MIH9YpTvkC8ONk607vw9So-img-2_1770831328000_na1fn_YmxvZy1jZW50cmFsLWJhbmtz.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L01JSDlZcFR2a0M4T05rNjA3dnc5U28taW1nLTJfMTc3MDgzMTMyODAwMF9uYTFmbl9ZbXh2WnkxalpXNTBjbUZzTFdKaGJtdHouanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=nfRcj40twe0z-JEbV4I6qnUbQMyCvXy5zjTLUV60JtRi2eKvmHnnVV8vxtH6FFgmmqGB7NRO~oz2roEQKRczIaPRzJNxOKpo2o6urdn2JyKJqeD-RLb6DrVhVbbBWYzRCE3oJCzZzAYmsnBI0Wdc~EcMVJEXg0Pb-F~~HutyWiL6LsHra23TaIsW5s4JKjDXTbRD3etj-uaeX2IM8uP3lS23m51IyFYDV8PujpqScBlwQgTTMuH2CZy~4-Ebn4IrKcWOAEehmxK~SAxh9vuM-1bYi~7muGyrc~D6znBqUWGNX5mQFMA~sxCD5--p0m5ygixnqkRagnijPw7Iu4TJsg__",
+    image: "/images/blog-central-banks.webp",
   },
   {
     title: "Asian Gold Demand Surges: Philippines, China, and India Lead the Charge",
@@ -68,7 +68,7 @@ const articles: Article[] = [
     readTime: "5 min read",
     category: "Regional Focus",
     categoryIcon: <Globe size={12} />,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/MIH9YpTvkC8ONk607vw9So-img-3_1770831350000_na1fn_YmxvZy1hc2lhbi1kZW1hbmQ.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L01JSDlZcFR2a0M4T05rNjA3dnc5U28taW1nLTNfMTc3MDgzMTM1MDAwMF9uYTFmbl9ZbXh2WnkxaGMybGhiaTFrWlcxaGJtUS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=eVl02CvYXTWxy92c0Hw3V6pOBNkU3cBoBq1P3zsR-fowFOrjjcz~7nJuBwQ7A4c0lzTbMNjhLpbwHCEn9Lmc6LAKeE1~H8kfBD~usrDTUfDEjU9Ux-3lU4V-6nvtvFmp4cH1QLZ0jxP1OrRVYEbfWZe4KplAzb2MUnnT9Bxk3LxLREVq84x7wzkj3s8PvmSqe~~TMFxoUJ8TQ7UReDKoFAcHQo4X0LD3n6mWecjVbwMM1-BvY~63OLog2ei8wdpC6zXsuM4mOJCsgEuSHnvO6QGMuVG1puixtSJKzbQ25d2JkJhKa9XAGnLZpeQSsU73mkmQtVSJST-KSo2Y9EkPRA__",
+    image: "/images/blog-asian-demand.webp",
   },
   {
     title: "Understanding Gold Purity: A Complete Guide to 18K, 22K, and 24K Gold",
@@ -84,7 +84,7 @@ const articles: Article[] = [
     readTime: "7 min read",
     category: "Education",
     categoryIcon: <BookOpen size={12} />,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/MIH9YpTvkC8ONk607vw9So-img-4_1770831350000_na1fn_YmxvZy1nb2xkLXB1cml0eQ.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L01JSDlZcFR2a0M4T05rNjA3dnc5U28taW1nLTRfMTc3MDgzMTM1MDAwMF9uYTFmbl9ZbXh2WnkxbmIyeGtMWEIxY21sMGVRLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=TSwGCAOrBYsl7LDuvRc7SQM760XPlknTuoP2~~WYpe0~XI6~QSYFCszIu5l0JUt~wskko-Dsfl1DKyNbhpIEcnqh7SrI-MRLCVEQlKLZK5sPZejBZVySAkoaXsYFJYoXy3M0LBMKlboPEet8HVXPLbhHdcvcCktyGF1-~JP0-UXvyxo4F2eu0Iltk2nQOgiTRNyq0GeCe4hRldc2MRf5SfESLf3pH9CaUwn0nJuq1-LgIDL95xl-Dc83bv0fXOEL7djJfuCejwmrWp~QkiVzomQ8HcME2vEHI~q0-hpInlGzW1qg9t6jC6YXadtNe6SE0jUOJcJxe9OwFdjJve-jdQ__",
+    image: "/images/blog-gold-purity.webp",
   },
   {
     title: "How to Start Investing in Physical Gold: A Beginner's Guide",
@@ -100,7 +100,7 @@ const articles: Article[] = [
     readTime: "8 min read",
     category: "Investment Guide",
     categoryIcon: <Lightbulb size={12} />,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/MIH9YpTvkC8ONk607vw9So-img-5_1770831344000_na1fn_YmxvZy1pbnZlc3RtZW50LWd1aWRl.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L01JSDlZcFR2a0M4T05rNjA3dnc5U28taW1nLTVfMTc3MDgzMTM0NDAwMF9uYTFmbl9ZbXh2WnkxcGJuWmxjM1J0Wlc1MExXZDFhV1JsLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=F8euA27bWI9d-CNjyCc~oALKJIaYhZ3CvPKYEMwAcMabd0av4kqYGv6hNzr2Zoh65~P9q1p7gZQCWH1CUZuOwKyXzvkNiD56MjJ8-VXtwVrppOvk6wqsw30qr2Ufyb3FBAYBu4oZL6J6UThmzG9uOGCZAP2mSIrc91DRZjrPVhvD4kYaTboLStFP355TT6zUkdIZYOYYQu0nf2fRv3rg0~RlFveIpBBA8uNBw0sVJn~BeBqeaElNo3piH9q3zodcGURG36pxObvAfTW0huwG4hlwOTW9MpidjJPCHS7I8Bqrh3uN2M7abSzFj51kPujNERtDe-u6jYcvlG-DlbgUXQ__",
+    image: "/images/blog-investment-guide.webp",
   },
   {
     title: "Gold Bull Market Outlook 2026: Analysts Forecast $5,200 to $6,000+",
@@ -116,7 +116,7 @@ const articles: Article[] = [
     readTime: "6 min read",
     category: "Market Outlook",
     categoryIcon: <Award size={12} />,
-    image: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/QUGtjh0BqERafnhZu7XFgy-img-1_1770831403000_na1fn_YmxvZy1vdXRsb29rLTIwMjY.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L1FVR3RqaDBCcUVSYWZuaFp1N1hGZ3ktaW1nLTFfMTc3MDgzMTQwMzAwMF9uYTFmbl9ZbXh2WnkxdmRYUnNiMjlyTFRJd01qWS5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=bBVbk3eGAX8I9Q50uq3-HdGkkxga4-UgzLcyc84v9Vw8TgukWRONjammC8xhZq-W9iMmQtNkS-9tqkGrd2zBOKVNu362QckrmvC21Sph2Op~A~X2rIQEvodWhN7wX9WqkW84nQXBR~qqnjYzaC5S3cAmSJYnuEfQ0xTUBl9SaKRBYlYSsI4FpZpBPcALftKSo4JBnwPXmfUH2uDfceofTHtRNY~2o41QifHoY4I6HMCyy35HhhsZUFO6qdqC1LCiMk00IX77tnwMEJcaDdvUBqoZQGX6PykLe~BrdX4W9hT64tMPLt7Zv1yu38RpwDQ3NkJUwv23ut7yJKRUkN2vEQ__",
+    image: "/images/blog-outlook-2026.webp",
   },
 ];
 

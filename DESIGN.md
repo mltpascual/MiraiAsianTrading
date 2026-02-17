@@ -235,7 +235,7 @@ bg-gradient-to-t from-[#0A0A0A] via-transparent to-[#0A0A0A]/40
 
 ### Image Sources
 
-All images are hosted on CDN (manuscdn.com) and referenced via absolute URLs. No local image files exist in the repository.
+All images are self-hosted in `/client/public/images/` and referenced via absolute paths (e.g., `/images/hero-gold-bars.webp`). This ensures resilience — images are stored directly in the GitHub repository and do not depend on any external CDN.
 
 ---
 

@@ -9,7 +9,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { Play } from "lucide-react";
 import { useState } from "react";
 
-const VAULT_IMAGE = "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/h8zwkf8UJ0XdQ5iGPfBf0a-img-4_1770802604000_na1fn_dmF1bHQtaW50ZXJpb3I.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L2g4endrZjhVSjBYZFE1aUdQZkJmMGEtaW1nLTRfMTc3MDgwMjYwNDAwMF9uYTFmbl9kbUYxYkhRdGFXNTBaWEpwYjNJLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=j79bljyLbHzSllE16NxSed3sLl~JqFfdqGra5eM40OgCAKqgkgN0tFPyz6QHaVNHv6qMODOu4Lfd02~gwml2c2yis8PXuC8xo-B91jX3BS5K8wTxPG-zDyd9DhZCxqakrO9jVUW8p1qVmaAar7Imhg1kETPASbe~DDoze4ci2xI9sOP~tA0PBIE0pW9dxtV-B2TJmIyDQINHvmaCCUktf1B~5Ka5Z~CX4~at14k54~9CgCrP~wbmgSMFJpoQ2HmwxGV-Nr1BnYva2PE66kVIFQRrxhdLxWENFQF6k7T6uqc7QU57A7hDWvbwn3TSHeKpJz7e2b-YUlZT4717GdereA__";
+const VAULT_IMAGE = "/images/vault-interior.webp";
 
 export default function AboutSection() {
   const { ref, isVisible } = useScrollAnimation(0.1);

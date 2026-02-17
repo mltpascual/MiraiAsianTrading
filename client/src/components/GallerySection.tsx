@@ -11,22 +11,22 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const galleryImages = [
   {
-    src: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/a0pRjpFR3zmVSmhlp65Dqy-img-1_1770809816000_na1fn_b2ZmaWNlLXNob3dyb29t.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L2EwcFJqcEZSM3ptVlNtaGxwNjVEcXktaW1nLTFfMTc3MDgwOTgxNjAwMF9uYTFmbl9iMlptYVdObExYTm9iM2R5YjI5dC5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=BoGP8L4b7v~Xy2YIRx~DpNaClhxBlhCuJrIIdxbOZgQaqMODNrbusgBxfFpAQTD8NM6lSD0CD6Z7OEn0N2gI7gsoWcpONizXWZwL~8oiOUAkvgllILbozhP0X3VJZ6fqSMlxPmsE2nNh2i1DlImFwDX02tDB-3jtE43JNmjD2H2LoBfSRBkD1gmPU1Ke2NSGJjy5iLVKimoAONL5tlWuFw1OEPk1YUfcF3oH7DbvrWU-Q3vco2ZXTKNAQKDvONyfN-fXMKxaO0vPdELLbtNs1eGO9Op1Zk~G8orCR5oh0DfbsHQYaaquEQii2xc5ZmH1vDFp1aGF2bL2hSeZRzHogQ__",
+    src: "/images/office-showroom.webp",
     title: "Our Showroom",
     span: "col-span-2 row-span-2",
   },
   {
-    src: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/a0pRjpFR3zmVSmhlp65Dqy-img-3_1770809812000_na1fn_Z29sZC1wcm9kdWN0cy1kaXNwbGF5.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L2EwcFJqcEZSM3ptVlNtaGxwNjVEcXktaW1nLTNfMTc3MDgwOTgxMjAwMF9uYTFmbl9aMjlzWkMxd2NtOWtkV04wY3kxa2FYTndiR0Y1LmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=O8bWRqKXxB-~fo7pYuPanEr1QhakMhaKyuBwYk~9GodruQt4M0IMBvYewQN5yN7mjCIim3va4EfQFrtfIIsg0Ea6Er7pTiZNU5T2cx1AyPruAevn7xIx-w~CuRopKfyYURGOCugNRQmUu9i~vzQ7cMjDPgbdzB~1HDZXnQyxINTqn~UTEKNLr4YPcp50Kok883KM0bZEElq4hSiY3zIBVRos7TTj8X3ssLdfvz3L8sxIUeregdYjMcVhNYPgA5wKQrb52UNvz0-m7UllF-WN7ArnghAs0ULvhKey46yKR~LFpjC~XbCkvEL5QpbiU69ptQIw4y5fUudSYOfIewFziw__",
+    src: "/images/gold-products-display.webp",
     title: "Gold Products Collection",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/a0pRjpFR3zmVSmhlp65Dqy-img-2_1770809824000_na1fn_dGVhbS1wcm9mZXNzaW9uYWw.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L2EwcFJqcEZSM3ptVlNtaGxwNjVEcXktaW1nLTJfMTc3MDgwOTgyNDAwMF9uYTFmbl9kR1ZoYlMxd2NtOW1aWE56YVc5dVlXdy5qcGc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=YsDEovqJVlDNoknxI7DL7AFLjfv3mCd~jRQa~5r1okaPp-JC1o4IObRveDVqdoF4EoO1GoNJBGf0JFWFu~ua2bNODH6QTasgcG1p0nFpCAHts7TrX9Yp-EgX8P4wOxzDEACD8ATmOsLAcSNbQMmK8ewFXWpBKmAAqWOKztdLXzjfx4sNT7oZqVDMa7E90XexK2rL-rRHVbXGJP~cN73iTic-wkjYaiuZmF-H2d8UQaHW9CBkCg~xcTIDh~hre7hBNNsLT5WDhVtYEGrWIG8x53xTJZbch~SrhnTsuAnkflFHSEPXd8Omhcy0VBzDx~kzaDdmFRb12pmaXWcf4WOqiA__",
+    src: "/images/team-professional.webp",
     title: "Our Expert Team",
     span: "col-span-1 row-span-1",
   },
   {
-    src: "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/a0pRjpFR3zmVSmhlp65Dqy-img-4_1770809809000_na1fn_Z29sZC12YXVsdC1zdG9yYWdl.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L2EwcFJqcEZSM3ptVlNtaGxwNjVEcXktaW1nLTRfMTc3MDgwOTgwOTAwMF9uYTFmbl9aMjlzWkMxMllYVnNkQzF6ZEc5eVlXZGwuanBnP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ijyMFLl0fJ63Q1KNxwI8mq7w0Ninxkfgh3mZFpOZAVzRvmwvUu61gqbN3WOwLc70FGraUhzwGWkB-ZInZxvic1QwBZIC9U1FAIKF4RkOe957kXyaNtV64agPZ9hzYK9eQuUst5FcurwTRYH7CYyTp6G3Fe-baRo3Sli7wA1Q8X1AIanm3T7qf3x6ZN25VDMN~hpLptF8dHxhTYCnzyQlqRK6NRmdEB4ul0Lo3D-USlVhqY9321ek-PiQBYJLTLzLYTSmvVtbKCHuwJ3P-VR9J9W3lT~Imjuz0hRSWebp65TByZDFZVVOoCIxY5JGWJrNBN5~kEz2znkpnW-kXgiDgg__",
+    src: "/images/gold-vault-storage.webp",
     title: "Secure Vault Storage",
     span: "col-span-2 row-span-1",
   },

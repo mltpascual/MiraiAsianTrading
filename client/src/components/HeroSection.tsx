@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { ArrowDown } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const HERO_IMAGE = "https://private-us-east-1.manuscdn.com/sessionFile/sJVdgMEqXZwHzMq5rCowpR/sandbox/h8zwkf8UJ0XdQ5iGPfBf0a-img-1_1770802581000_na1fn_aGVyby1nb2xkLWJhcnM.jpg?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvc0pWZGdNRXFYWndIek1xNXJDb3dwUi9zYW5kYm94L2g4endrZjhVSjBYZFE1aUdQZkJmMGEtaW1nLTFfMTc3MDgwMjU4MTAwMF9uYTFmbl9hR1Z5YnkxbmIyeGtMV0poY25NLmpwZz94LW9zcy1wcm9jZXNzPWltYWdlL3Jlc2l6ZSx3XzE5MjAsaF8xOTIwL2Zvcm1hdCx3ZWJwL3F1YWxpdHkscV84MCIsIkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc5ODc2MTYwMH19fV19&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=PH5e1pKbErvdbDi7bI4bgRfYxzxyGXbtipNIbUMTRU6wXx2x1KjKH9LbZua60egKZ5RVGQWyPIbreG-RHfYUwkWyhU8Jed9woPSVcZA9yGcOlPmxRZAAYbZ1gaI78O~2wHOxZlff0o0ZOd-E3f0CTvODH4OppmWbVPTKJV2Lm3OP2Wco0vUCC0Tk2N74cWtmznQa4Xev~dVZpwqwFIIDYc4snD0P2VNOJJYigCsucB13JpUoX0nftSVzdHLacE4PPKytfB4fnrpOkUZ7V5-tlCAQudpg0bZOEV1pz6V9UK8i7cbbS-svQqpzJAi6XNQw5aoIlARWbm5pKy7MEMtw1Q__";
+const HERO_IMAGE = "/images/hero-gold-bars.webp";
 
 export default function HeroSection() {
   const [loaded, setLoaded] = useState(false);
